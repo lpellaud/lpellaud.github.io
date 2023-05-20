@@ -1,4 +1,0 @@
-# lilypellaud
-About
-Portfolio
-Contact
