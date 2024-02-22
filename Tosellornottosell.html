@@ -1,180 +1,136 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body {
-      margin: 40px;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
+    <title>Image Gallery</title>
+    <style>
 
-    .echo-des-combles {
-      display: inline-block;
-      flex-basis: calc(33.33% - 20px);
-      margin-right: 20px;
-      height: 300px;
-      vertical-align: top;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .echo-des-combles-container {
-      max-width: 300px;
-      text-align: center;
-      margin-top: 10px;
-      margin bottom: 20px;
-    }
+        /* Introduction text on top */
+        .intro_text {
+            margin-top: 60px;
+            margin-left: 60px;
+            margin-bottom: 120px;
+            margin-right: 30px;
+            /* Details font dans le texte en haut (intro) */
+            font-family: monospace;
+            font-size: 18px;
 
-    img {
-      height: 300px;
-      max-width: 100%;
-    }
+            background-color: #cccccc; /* enleve ca une fois que t'en as plus besoin :) */
+        }
 
-    .image-group {
-      display: inline-block;
-      flex-basis: calc(33.33% - 20px);
-      margin-right: 20px;
-      height: 300px;
-      vertical-align: top;
-      margin-bottom: 20px; /* Add a margin between rows of images */
-    }
+        /* The gallery itself, contains all the pictures and legends */
+        .galerie_toutes_les_photos {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: space-between;
+        }
 
-    .to-be-remembered-row {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 20px 0 0 0; /* Add a margin between text and images */
-      margin-bottom: 20px;
-    }
+        .bloc_une_photo_plus_legende {
+            margin-bottom: 20px; /* Vertical space */
+            text-align: center;
+            /* Details font dans les légendes des images */
+            font-family: monospace; 
+            font-size: 12px;
 
-    .to-be-remembered-row .image-group {
-      flex-basis: calc(33.33% - 20px);
-      margin-right: 20px;
-      margin-bottom: 20px; /* Add a margin between images within a row */
-    }
+            background-color: grey; /* enleve ca une fois que t'en as plus besoin :) */
+        }
 
-    .echo-des-combles-container p {
-      margin: 0; /* Remove margin below and above titles */
-    }
-  </style>
+        .bloc_une_photo_plus_legende img {
+            width: 300px; /* Put 100% here if you prefer */
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        /* Responsive for Desktops: 3 columns */
+        @media (min-width: 1024px) {
+            .bloc_une_photo_plus_legende {
+                width: calc(33.33% - 20px); /* Adjust 20px for horizontal space */
+            }
+        }
+
+        /* Responsive for Tablets: 2 columns */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .bloc_une_photo_plus_legende {
+                width: calc(50% - 15px); /* Adjust 15px for horizontal space */
+            }
+        }
+
+        /* Responsive for Mobile: 1 column */
+        @media (max-width: 767px) {
+            .galerie_toutes_les_photos {
+                justify-content: center;
+            }
+            .bloc_une_photo_plus_legende {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <p>It's not a question anymore.</p>
-
-    <p>Here you will find works that are still available to sell.</p>
-    <p>By interest in a to purchase or visit my studio, you can contact me through <a href="mailto:lilypellaud@gmail.com">lilypellaud@gmail.com</a></p>
-
-  <div class="echo-des-combles">
-    <div class="echo-des-combles-container">
-      <img src="DSC_0036-Edit-Bearbeitet.jpg">
-      <p>"Staples on the wall, what are they trying to hold?", 2023</p>
-      <p>45 X 62 cm</p>
-      <p>Price on demand</p>
-    </div>
-  </div>
-
-  <div class="echo-des-combles">
-    <div class="echo-des-combles-container">
-      <img src="DSC_0046.jpg">
-      <p>"Hold the house together, silent resistance", 2023</p>
-      <p>40cm x 45 cm</p>
-      <p>Price on demand</p>
-    </div>
-  </div>
-
-  <div class="echo-des-combles">
-    <div class="echo-des-combles-container">
-      <img src="DSC_0139-Edit - Copy.jpg">
-      <p>"Le parquet se soulève en signe de protestation", 2023</p>
-      <p>60 X 75 cm</p>
-      <p>Price on demand</p>
-    </div>
-  </div>
-
-  <div class="to-be-remembered-row">
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="8X4A0265-2.jpg">
-        <p>To be remembered #1, 2022</p>
-        <p>19 X 13,5 cm</p>
-        <p>Price on demand</p>
-      </div>
+    <div class="intro_text">
+        <p>It's not a question anymore.</p>
+        <p>Here you will find works that are still available to sell.</p>
+        <p>By interest in purchasing any of the works or visiting my studio, you can contact me through <a href="mailto:lilypellaud@gmail.com">lilypellaud@gmail.com</a></p>
     </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="8X4A0269-2.jpg">
-        <p>To be remembered #2, 2022</p>
-        <p>18,5 X 15 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+    <div class="galerie_toutes_les_photos">
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="8X4A0270-2.jpg">
-        <p>To be remembered #3, 2022</p>
-        <p>19 X 13,5 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="DSC_0036-Edit-Bearbeitet.jpg" alt="Staples on the wall">
+            <p>L'écho des combles, 2023</p>
+        </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="8X4A0272.jpg">
-        <p>To be remembered #4, 2022</p>
-        <p>"Brainstorming until it's not working anymore, Going to the spa later"</p>
-        <p>20 X 14,5 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="DSC_0046.jpg" alt="Hold the house together">
+            <p>L'écho des combles, 2023</p>
+        </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="8X4A0274.jpg">
-        <p>To be remembered #5, 2022</p>
-        <p>"Open the walls"</p>
-        <p>20 X 14 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="DSC_0139-Edit.jpg" alt="Le parquet se soulève en signe de protestation">
+            <p>L'écho des combles, 2023</p>
+        </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="20231023_135158.jpg">
-        <p>To be remembered #6, 2022</p>
-        <p>"A labyrinth where the sleepy hours play cards and lose their money"</p>
-        <p>18,5 X 15,5 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="8X4A0265-2.jpg" alt="Description of image 4">
+            <p>To be remembered, 2022</p>
+        </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="20231023_135230.jpg">
-        <p>To be remembered #7, 2022</p>
-        <p>19 X 13,5 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="8X4A0269-2.jpg" alt="Description of image 5">
+            <p>To be remembered, 2022</p>
+        </div>
 
-    <div class="image-group">
-      <div class="echo-des-combles-container">
-        <img src="20231023_135247.jpg">
-        <p>To be remembered #8, 2022</p>
-        <p>26 X 18,5 cm</p>
-        <p>Price on demand</p>
-      </div>
-    </div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="8X4A0270-2.jpg" alt="Description of image 6">
+            <p>To be remembered, 2022</p>
+        </div>
 
-     <div class="image-group">
-       <div class="echo-des-combles-container">
-          <img src="20231023_135308.jpg">
-          <p>To be remembered #9, 2022</p>
-          <p>20 X 15 cm</p>
-          <p>Price on demand</p>
-       </div>
-     </div>
-  </div>
-</div>
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="8X4A0272.jpg" alt="Description of image 7">
+            <p>To be remembered, 2022</p>
+        </div>
+
+        <!-- Repeat this block for each image -->
+        <div class="bloc_une_photo_plus_legende">
+            <img src="8X4A0274.jpg" alt="Description of image 8">
+            <p>To be remembered, 2022</p>
+        </div>
+    </div>
 </body>
 </html>
-
