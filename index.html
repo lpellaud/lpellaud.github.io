@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Lily Pellaud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsiveness -->
     <style>
         .italic-text {
             font-style: italic;
@@ -24,7 +25,8 @@
         }
 
         h4 {
-            font-family: "Sans Source Pro", sans-serif; font-size:x-small;
+            font-family: "Sans Source Pro", sans-serif;
+            font-size: x-small;
             color: white;
         }
         body {
@@ -33,14 +35,68 @@
             background-color: #b53154;
         }
 
+        /* Media Queries */
+        @media (max-width: 767px) {
+            /* Styles for phones */
+            body {
+                margin-left: 10px; /* Adjusted margin for smaller screens */
+                margin-top: 20px; /* Adjusted margin for smaller screens */
+                font-size: 12pt; /* Adjusted font size for smaller screens */
+            }
+            h1 {
+                font-size: 24px; /* Adjusted font size for smaller screens */
+            }
+            h3 {
+                font-size: 18px; /* Adjusted font size for smaller screens */
+            }
+            h4 {
+                font-size: 14px; /* Adjusted font size for smaller screens */
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            /* Styles for tablets */
+            body {
+                margin-left: 30px; /* Adjusted margin for tablets */
+                margin-top: 30px; /* Adjusted margin for tablets */
+                font-size: 14pt; /* Adjusted font size for tablets */
+            }
+            h1 {
+                font-size: 36px; /* Adjusted font size for tablets */
+            }
+            h3 {
+                font-size: 22px; /* Adjusted font size for tablets */
+            }
+            h4 {
+                font-size: 16px; /* Adjusted font size for tablets */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            /* Styles for computers */
+            body {
+                margin-left: 50px;
+                margin-top: 50px;
+                font-size: 15pt;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h3 {
+                font-size: 28px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
    <h1>Lily Pellaud</h1>
    <br/>
    <h3><a href="WhoamI.html">About</a></h3>
- <h3><a href="PORTFOLIO20240713_LilyPellaud.pdf" target="_blank">Portfolio</a></h3>
- <h3><a href="archive.html">Archive</a></h3>
- <h3><a href="contact.html">Contact</a></h3>
-  </body>
-  </html>
+   <h3><a href="PORTFOLIO20240713_LilyPellaud.pdf" target="_blank">Portfolio</a></h3>
+   <h3><a href="archive.html">Archive</a></h3>
+   <h3><a href="contact.html">Contact</a></h3>
+</body>
+</html>
