@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
   <style>
     body {
       margin-top: 50px;
@@ -13,38 +14,49 @@
       background-size: 50px 50px;
     }
 
+    .same.size {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center items horizontally */
+    }
+
+    .same.size img {
+      margin-bottom: 10px; /* Adjust spacing between images */
+      margin-right: 10px; /* Adjust spacing between images */
+    }
+
     @media (min-width: 1024px) {
-            .bloc_une_photo_plus_legende {
-                width: calc(33.33% - 20px); /* Adjust 20px for horizontal space */
-            }
-        }
+      .bloc_une_photo_plus_legende {
+        width: calc(33.33% - 20px); /* Adjust 20px for horizontal space */
+      }
+    }
 
-        /* Responsive for Tablets: 2 columns */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .bloc_une_photo_plus_legende {
-                width: calc(50% - 15px); /* Adjust 15px for horizontal space */
-            }
-        }
+    /* Responsive for Tablets: 2 columns */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .bloc_une_photo_plus_legende {
+        width: calc(50% - 15px); /* Adjust 15px for horizontal space */
+      }
+    }
 
-        /* Responsive for Mobile: 1 column */
-        @media (max-width: 767px) {
-            .galerie_toutes_les_photos {
-                justify-content: center;
-            }
-            .bloc_une_photo_plus_legende {
-                width: 100%;
-            }
-        }
+    /* Responsive for Mobile: 1 column */
+    @media (max-width: 767px) {
+      .galerie_toutes_les_photos {
+        justify-content: center;
+      }
+      .bloc_une_photo_plus_legende {
+        width: 100%;
+      }
+    }
   </style>
-  <body>
-    <div class="same size">
-      <img src="345_8.jpg" width="280">
-      <img src="THEWAITINGROOM.jpg" width="280">
-      <img src="IFCARPOSTER.jpg" width="280">
-      <img src="wonky and skewed.jpg" width="280">
-      <img src="Untitled 2-3.jpg" width="280">
-      <img src="Screenshot (99).png" width="280">
-    </div>
-  </body>
+</head>
+<body>
+  <div class="same size">
+    <img src="345_8.jpg" width="280">
+    <img src="THEWAITINGROOM.jpg" width="280">
+    <img src="IFCARPOSTER.jpg" width="280">
+    <img src="wonky and skewed.jpg" width="280">
+    <img src="Untitled 2-3.jpg" width="280">
+    <img src="Screenshot (99).png" width="280">
+  </div>
+</body>
 </html>
-
