@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Sans Source Pro', sans-serif;
-      font-size: 70pt;
+      font-size: 70pt; /* Default font size */
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-image: url('D:\GITHUB\GitHub\lpellaud.github.io\backdrop dark green.jpg'); /* Replace 'path_to_your_image.jpg' with your image path */
+      background-image: url('https://example.com/backdrop-dark-green.jpg'); /* Replace with your image URL */
       background-size: cover; /* Cover the entire background */
       background-position: center; /* Center the background image */
     }
@@ -23,7 +24,26 @@
       color: #cd0b7c;
       margin: 0 10px;
       text-decoration: none;
-      font-size: 70px;
+      font-size: 70px; /* Default icon size */
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 1024px) {
+      body {
+        font-size: 50pt; /* Adjust font size for tablets */
+      }
+      .contact-icons a {
+        font-size: 50px; /* Adjust icon size for tablets */
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 30pt; /* Adjust font size for phones */
+      }
+      .contact-icons a {
+        font-size: 30px; /* Adjust icon size for phones */
+      }
     }
   </style>
 </head>
