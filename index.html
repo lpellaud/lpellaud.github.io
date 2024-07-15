@@ -4,43 +4,33 @@
     <title>Lily Pellaud</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsiveness -->
     <style>
-        .italic-text {
-            font-style: italic;
-            font-weight: normal;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue Bold', sans-serif;
+            background-color: #b53154;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
         }
-        .img-margin {
-            margin-bottom: 0;
-        }
-        .p-margin {
-            margin-top: 0;
-        }
-        
-        h1 {
-            font-family: "Helvetica Neue Bold", sans-serif;
-            color: white;
-        }
-        h3 {
-            font-family: "Sans Source Pro", sans-serif;
+
+        h1, h3, h4 {
+            margin: 0;
             color: white;
         }
 
-        h4 {
-            font-family: "Sans Source Pro", sans-serif;
-            font-size: x-small;
-            color: white;
-        }
-        body {
-            margin-left: 50px;
-            margin-top: 50px;
-            background-color: #b53154;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Media Queries */
         @media (max-width: 767px) {
             /* Styles for phones */
             body {
-                margin-left: 10px; /* Adjusted margin for smaller screens */
-                margin-top: 20px; /* Adjusted margin for smaller screens */
                 font-size: 12pt; /* Adjusted font size for smaller screens */
             }
             h1 {
@@ -57,8 +47,6 @@
         @media (min-width: 768px) and (max-width: 1023px) {
             /* Styles for tablets */
             body {
-                margin-left: 30px; /* Adjusted margin for tablets */
-                margin-top: 30px; /* Adjusted margin for tablets */
                 font-size: 14pt; /* Adjusted font size for tablets */
             }
             h1 {
@@ -75,8 +63,6 @@
         @media (min-width: 1024px) {
             /* Styles for computers */
             body {
-                margin-left: 50px;
-                margin-top: 50px;
                 font-size: 15pt;
             }
             h1 {
@@ -92,11 +78,13 @@
     </style>
 </head>
 <body>
-   <h1>Lily Pellaud</h1>
-   <br/>
-   <h3><a href="WhoamI.html">About</a></h3>
-   <h3><a href="PORTFOLIO20240713_LilyPellaud.pdf" target="_blank">Portfolio</a></h3>
-   <h3><a href="archive.html">Archive</a></h3>
-   <h3><a href="contact.html">Contact</a></h3>
+    <div class="container">
+        <h1>Lily Pellaud</h1>
+        <br/>
+        <h3><a href="WhoamI.html" style="color: white; text-decoration: none;">About</a></h3>
+        <h3><a href="PORTFOLIO20240713_LilyPellaud.pdf" target="_blank" style="color: white; text-decoration: none;">Portfolio</a></h3>
+        <h3><a href="archive.html" style="color: white; text-decoration: none;">Archive</a></h3>
+        <h3><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></h3>
+    </div>
 </body>
 </html>
