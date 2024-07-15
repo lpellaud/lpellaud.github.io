@@ -18,7 +18,12 @@
             text-align: center;
         }
 
-        h1, h3, h4 {
+        h1 {
+            margin: 0;
+            color: rgb(113, 246, 11);
+        }
+
+        h3, h4 {
             margin: 0;
             color: rgb(113, 246, 11);
         }
@@ -27,6 +32,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* Add margin to create space between title and paragraph */
+        .title-space {
+            margin-top: 20px; /* Adjust the value as needed */
         }
 
         /* Media Queries */
@@ -44,6 +54,9 @@
             h4 {
                 font-size: 14px; /* Adjusted font size for smaller screens */
             }
+            .title-space {
+                margin-top: 10px; /* Adjust the value as needed */
+            }
         }
 
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -59,6 +72,9 @@
             }
             h4 {
                 font-size: 16px; /* Adjusted font size for tablets */
+            }
+            .title-space {
+                margin-top: 15px; /* Adjust the value as needed */
             }
         }
 
@@ -76,14 +92,16 @@
             h4 {
                 font-size: 18px;
             }
+            .title-space {
+                margin-top: 20px; /* Adjust the value as needed */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Lily Pellaud</h1>
-        <br><br/>
-        <br><br/>
+        <div class="title-space"></div>
         <h3><a href="WhoamI.html" style="color:  rgb(113, 246, 11); text-decoration: none;">About</a></h3>
         <h3><a href="PORTFOLIO20240713_LilyPellaud.pdf" target="_blank" style="color:  rgb(113, 246, 11); text-decoration: none;">Portfolio</a></h3>
         <h3><a href="archive.html" style="color:  rgb(113, 246, 11); text-decoration: none;">Archive</a></h3>
