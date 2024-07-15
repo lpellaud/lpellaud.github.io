@@ -6,11 +6,11 @@
       margin: 50px;
       font-family: 'Sans Source Pro', sans-serif;
       background: 
-        linear-gradient(90deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        linear-gradient(90deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        linear-gradient(0deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        linear-gradient(0deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-      background-size: 50px 50px;
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+        white;
+      background-size: 50px 50px; /* Adjust the size of the squares */
+      background-position: 0 0, 25px 25px; /* Shift the second layer to create the checkerboard */
     }
 
     .same.size {
@@ -20,7 +20,7 @@
     }
 
     .same.size img {
-      margin-bottom: 10px; /* Adjust spacing between images */
+      margin-bottom: 20px; /* Adjust spacing between images */
     }
 
     @media (min-width: 1024px) {
