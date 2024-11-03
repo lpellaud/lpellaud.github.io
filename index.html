@@ -145,7 +145,7 @@
 <body>
     <!-- House Icon for Menu -->
     <div class="menu-icon" onclick="toggleMenu()">
-        <img src="https://lpellaud.github.io/blob/main/image%20icon/spidercursor.png" alt="Home Icon" class="home-icon">"><!-- Simple house icon using an emoji; replace with SVG if preferred -->
+        <img src="https://lpellaud.github.io/blob/main/image%20icon/spidercursor.png" alt= "Home Icon" class="home-icon"> <!-- Simple house icon using an emoji; replace with SVG if preferred -->
     </div>
 
     <!-- Dropdown Menu -->
@@ -171,14 +171,14 @@
         const movingText = document.getElementById('movingText');
 
         function moveRandomly() {
-            const x = Math.random() * (window.innerWidth - movingText.offsetWidth);
-            const y = Math.random() * (window.innerHeight - movingText.offsetHeight);
+            const x = Math.random() * (window.innerWidth - movingText.offsetWidth - 20);
+            const y = Math.random() * (window.innerHeight - movingText.offsetHeight - 40) +20;
 
             movingText.style.transform = `translate(${x}px, ${y}px)`;
         }
 
         // Call moveRandomly every 0.5 seconds
-        setInterval(moveRandomly, 500);
+        setInterval(moveRandomly, 700);
     </script>
 
     <script>
