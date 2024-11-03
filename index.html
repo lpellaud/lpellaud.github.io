@@ -43,6 +43,8 @@
                 transform: scale(4); /* Stretch to 120% */
             }
 
+        }
+
         h3, h4 {
             margin: 0;
             color: rgb(255, 255, 255);
@@ -182,19 +184,6 @@
             const dropdown = document.getElementById('dropdownMenu');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
-
-        // JavaScript for random movement animation
-        const movingText = document.getElementById('movingText');
-
-        function moveRandomly() {
-            const x = Math.random() * (window.innerWidth - movingText.offsetWidth - 20);
-            const y = Math.random() * (window.innerHeight - movingText.offsetHeight - 40) +20;
-
-            movingText.style.transform = `translate(${x}px, ${y}px)`;
-        }
-
-        // Call moveRandomly every 0.5 seconds
-        setInterval(moveRandomly, 700);
 
         // Optional: Close the dropdown if clicked outside
         window.onclick = function(event) {
