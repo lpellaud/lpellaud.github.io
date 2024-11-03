@@ -31,12 +31,12 @@
 
         h1 {
             margin: 0;
-            color: rgb(144, 238, 238);
+            color: rgb(0, 0, 0);
         }
 
         h3, h4 {
             margin: 0;
-            color: rgb(144, 238, 238);
+            color: rgb(255, 255, 255);
             font-family: 'Folio-Std-Bold-Condensed', sans-serif;
         }
 
@@ -75,7 +75,7 @@
         }
 
         .dropdown-menu a {
-            color: rgb(144, 238, 238);
+            color: rgb(255, 255, 255);
             text-decoration: none;
             display: block;
             padding: 8px;
@@ -149,8 +149,8 @@
     </style>
 </head>
 <body>
-    <!-- House Icon for Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">
+    <!-- spider Icon for Menu -->
+    <div class="menu-icon" onclick="toggleMenu(event)">
         <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
     </div>
 
@@ -168,7 +168,8 @@
 
     <script>
         // JavaScript to toggle dropdown menu visibility
-        function toggleMenu() {
+        function toggleMenu(event) {
+            event.stopPropagation(); //Prevent event bubbling
             const dropdown = document.getElementById('dropdownMenu');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
@@ -189,8 +190,10 @@
         // Optional: Close the dropdown if clicked outside
         window.onclick = function(event) {
             const dropdown = document.getElementById('dropdownMenu');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';            
-        }
+            if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') 
+                dropdown.style.display = 'none';        
+            
+            }
     </script>
 </body>
 </html>
