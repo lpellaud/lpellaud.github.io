@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lily Pellaud</title>
     <style>
+        /* Font and Basic Body Styling */
         @font-face {
             font-family: 'Folio-Std-Bold';
             src: url('D:/GITHUB/GitHub/lpellaud.github.io/font/Folio-Std-Bold-Condensed.ttf') format('truetype');
@@ -45,36 +46,38 @@
             align-items: center;
         }
 
-        /* Navigation Menu Styles */
-        nav {
-            margin-bottom: 20px;
+        /* House Icon Styling */
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(113, 246, 11);
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px; /* Space between links */
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
+        .dropdown-menu a {
             color: rgb(113, 246, 11);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
+            display: block;
+            padding: 8px;
+            font-size: 16px;
         }
 
-        nav ul li a:hover {
-            color: rgb(200, 255, 150); /* Hover effect */
-        }
-
-        /* Add margin to create space between title and paragraph */
-        .title-space {
-            margin-top: 20px;
+        .dropdown-menu a:hover {
+            background-color: rgb(200, 255, 150);
         }
 
         /* Media Queries */
@@ -85,15 +88,16 @@
             h1 {
                 font-size: 36px;
             }
-            h3 {
-                font-size: 27px;
-            }
-            h4 {
+            h3, h4 {
                 font-size: 14px;
             }
-            nav ul {
-                flex-direction: column; /* Stack links vertically on small screens */
-                gap: 10px;
+            .menu-icon {
+                font-size: 24px;
+                top: 15px;
+                right: 15px;
+            }
+            .dropdown-menu a {
+                font-size: 14px;
             }
         }
 
@@ -104,14 +108,16 @@
             h1 {
                 font-size: 36px;
             }
-            h3 {
-                font-size: 22px;
-            }
-            h4 {
+            h3, h4 {
                 font-size: 16px;
             }
-            .title-space {
-                margin-top: 15px;
+            .menu-icon {
+                font-size: 28px;
+                top: 20px;
+                right: 20px;
+            }
+            .dropdown-menu a {
+                font-size: 16px;
             }
         }
 
@@ -122,32 +128,57 @@
             h1 {
                 font-size: 40px;
             }
-            h3 {
-                font-size: 23px;
-            }
-            h4 {
+            h3, h4 {
                 font-size: 18px;
             }
-            .title-space {
-                margin-top: 20px;
+            .menu-icon {
+                font-size: 30px;
+                top: 20px;
+                right: 20px;
+            }
+            .dropdown-menu a {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- House Icon for Menu -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        🏠 <!-- Simple house icon using an emoji; replace with SVG if preferred -->
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="WhoamI.html">About</a>
+        <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank">Portfolio</a>
+        <a href="archive.html">Archive</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
     <div class="container">
         <h1>Lily Pellaud</h1>
-        <nav>
-            <ul>
-                <li><a href="WhoamI.html">About</a></li>
-                <li><a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank">Portfolio</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
         <div class="title-space"></div>
-        <h3>Welcome to my jolly mess !</h3>
-        <h4>Explore my work and get in touch.</h4>
+        <h3><a href="WhoamI.html" style="color:  rgb(113, 246, 11); text-decoration: none;">About</a></h3>
+        <h3><a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank" style="color:  rgb(113, 246, 11); text-decoration: none;">Portfolio</a></h3>
+        <h3><a href="archive.html" style="color:  rgb(113, 246, 11); text-decoration: none;">Archive</a></h3>
+        <h3><a href="contact.html" style="color:  rgb(113, 246, 11); text-decoration: none;">Contact</a></h3>
     </div>
+
+    <script>
+        // JavaScript to toggle dropdown menu visibility
+        function toggleMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Optional: Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            }
+        };
+    </script>
 </body>
 </html>
