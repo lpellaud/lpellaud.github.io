@@ -167,6 +167,27 @@
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
 
+        // JavaScript for random movement animation
+        const movingText = document.getElementById('movingText');
+
+        function moveRandomly() {
+            const x = Math.random() * (window.innerWidth - movingText.offsetWidth);
+            const y = Math.random() * (window.innerHeight - movingText.offsetHeight);
+
+            movingText.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        // Call moveRandomly every 2 seconds
+        setInterval(moveRandomly, 2000);
+    </script>
+
+    <script>
+        // JavaScript to toggle dropdown menu visibility
+        function toggleMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
         // Optional: Close the dropdown if clicked outside
         window.onclick = function(event) {
             const dropdown = document.getElementById('dropdownMenu');
