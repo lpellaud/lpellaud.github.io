@@ -32,15 +32,18 @@
         h1 {
             margin: 0;
             color: rgb(0, 0, 0);
-            animation: stretch is infinite;
+            animation: stretch 5s forwards;
         }
 
         @keyframes stretch {
-            0%, 100% {
+            0%, {
                 transform: scale(1); /* Normal size */
             }
             50% {
                 transform: scale(4); /* Stretch to 120% */
+            }
+            100%, {
+                transform: scale(1); /* Normal size */
             }
 
         }
