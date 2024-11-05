@@ -26,6 +26,17 @@
       cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
     }
 
+    /* Footer Styling */
+    footer {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom of the footer */
+            margin-top: auto;
+            color:rgb(255, 162, 0);
+            font-size: 0.9rem;
+        }
+
+
     .return-icon {
     position: fixed; /* Keeps it in a fixed position */
     top: 20px; /* Distance from the top */
@@ -51,6 +62,11 @@
         font-size: 16pt; /* Adjust font size for tablets */
       }
 
+      footer {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
       .spider-icon {
     width: 80px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
@@ -66,6 +82,10 @@
         font-size: 12pt; /* Adjust font size for phones */
         max-width: 100%; /* Full width paragraphs on smaller screens */
       }
+      footer {
+                font-size: 0.8rem;
+                margin-bottom: 15px; /* Add margin to the bottom of the footer */
+              } 
 
       .spider-icon {
     width: 60px; /* Adjust size as needed */
@@ -87,6 +107,18 @@
   Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
   exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
   Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
+
+ <!-- Footer with Dynamic Year -->
+ <footer>
+  &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
+</footer>
+
+<script>
+  // JavaScript to dynamically set the current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
+
 </html>
 

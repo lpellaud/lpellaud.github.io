@@ -28,6 +28,17 @@
       font-size: 60px; /* Default icon size */
     }
 
+    /* Footer Styling */
+    footer {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom of the footer */
+            margin-top: auto;
+            color: #ff61bd;
+            font-size: 0.9rem;
+        }
+
+
     .return-icon {
     position: fixed; /* Keeps it in a fixed position */
     top: 20px; /* Distance from the top */
@@ -48,6 +59,11 @@
       .contact-icons a {
         font-size: 50px; /* Adjust icon size for tablets */
       }
+
+      footer {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
       .spider-icon {
     width: 80px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
@@ -61,6 +77,11 @@
       .contact-icons a {
         font-size: 60px; /* Adjust icon size for phones */
       }
+
+      footer {
+                font-size: 0.8rem;
+                margin-bottom: 15px; /* Add margin to the bottom of the footer */
+              }      
 
       .spider-icon {
     width: 50px; /* Adjust size as needed */
@@ -81,5 +102,16 @@
     <a href="https://www.instagram.com/lilypellaud" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="mailto:lilypellaud@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
+
+  <!-- Footer with Dynamic Year -->
+  <footer>
+    &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
+</footer>
+
+<script>
+    // JavaScript to dynamically set the current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
