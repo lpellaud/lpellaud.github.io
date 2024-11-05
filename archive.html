@@ -24,9 +24,25 @@
       margin-bottom: 20px; /* Adjust spacing between images */
     }
 
+    .return-icon {
+    position: fixed; /* Keeps it in a fixed position */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+    .spider-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
     @media (min-width: 1024px) {
       .bloc_une_photo_plus_legende {
         width: calc(40% - 20px); /* Adjust 20px for horizontal space */
+      }
+      .spider-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
       }
     }
 
@@ -35,6 +51,11 @@
       .bloc_une_photo_plus_legende {
         width: calc(50% - 15px); /* Adjust 15px for horizontal space */
       }
+
+      .spider-icon {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
     }
 
     /* Responsive for Mobile: 1 column */
@@ -44,6 +65,11 @@
       }
       .bloc_une_photo_plus_legende {
         width: 200%;
+
+        .spider-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
       }
     }
   </style>

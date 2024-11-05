@@ -28,6 +28,18 @@
       font-size: 70px; /* Default icon size */
     }
 
+    .return-icon {
+    position: fixed; /* Keeps it in a fixed position */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+    .spider-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
     /* Media Queries for responsiveness */
     @media (max-width: 1024px) {
       body {
@@ -35,6 +47,10 @@
       }
       .contact-icons a {
         font-size: 50px; /* Adjust icon size for tablets */
+      }
+      .spider-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
       }
     }
 
@@ -45,6 +61,11 @@
       .contact-icons a {
         font-size: 60px; /* Adjust icon size for phones */
       }
+
+      .spider-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
     }
   </style>
 </head>
