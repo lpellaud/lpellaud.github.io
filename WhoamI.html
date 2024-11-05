@@ -26,6 +26,15 @@
       cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
     }
 
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+
     /* Footer Styling */
     footer {
             width: 100%;
@@ -95,7 +104,7 @@
   </style>
 </head>
 <body>
-
+<div class="content">
   <!-- spider Icon for return Index -->
   <a href="index.html" class="return-icon">
     <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Return to Index" class="spider-icon">
@@ -112,6 +121,7 @@
  <footer>
   &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
 </footer>
+</div>
 
 <script>
   // JavaScript to dynamically set the current year
