@@ -27,21 +27,20 @@
         }
 
 
-        body {
+        
+            body {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue Bold', sans-serif;
+            display: flex;
+            justify-content: center; /* Horizontally centers the title */
+            align-items: center; /* Vertically centers the title */
+            min-height: 100vh; /* Makes sure the body takes the full height of the viewport */
+            text-align: center; /* Centers the text */
             background-image: url('https://raw.githubusercontent.com/lpellaud/lpellaud-images/main/backdrop%20pink.jpg');
             background-size: cover;
             background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
-            flex-direction: column;
         }
+
 
         h1 {
             margin: 0;
