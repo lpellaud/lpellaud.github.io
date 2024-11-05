@@ -63,6 +63,13 @@
             flex-direction: column;
             align-items: center;
         }
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            text-align: center;
+            color: #000000;
+            font-size: 0.9rem;
+        }
 
         /* House Icon Styling */
         .menu-icon {
@@ -123,6 +130,9 @@
             .dropdown-menu a {
                 font-size: 16px;
             }
+            footer {
+                font-size: 0.8rem;
+            }   
         }
 
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -143,6 +153,9 @@
             .dropdown-menu a {
                 font-size: 16px;
             }
+            footer {
+                font-size: 1rem;
+            } 
         }
 
         @media (min-width: 1024px) {
@@ -162,6 +175,9 @@
             }
             .dropdown-menu a {
                 font-size: 15px;
+            }
+            footer {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -184,7 +200,15 @@
         <h1 id="movingText">Lily Pellaud</h1>
     </div>
 
+    <!-- Footer with Dynamic Year -->
+    <footer>
+        &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
+    </footer>
+
     <script>
+        // JavaScript to dynamically set the current year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
         // JavaScript to toggle dropdown menu visibility
         function toggleMenu(event) {
             event.stopPropagation(); //Prevent event bubbling
