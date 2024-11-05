@@ -11,6 +11,18 @@
             box-sizing: border-box;
         }
 
+        .return-icon {
+    position: fixed; /* Keeps it in a fixed position */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+    .spider-icon {
+    width: 80px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
         /* Introduction text on top */
         .intro_text {
             margin-top: 60px;
@@ -20,116 +32,57 @@
             /* Details font dans le texte en haut (intro) */
             font-family: monospace;
             font-size: 18px;
+            color: #020339;
 
     
         }
 
-        /* The gallery itself, contains all the pictures and legends */
-        .galerie_toutes_les_photos {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 10px;
-            justify-content: space-between;
-        }
-
-        .bloc_une_photo_plus_legende {
-            margin-bottom: 20px; /* Vertical space */
-            text-align: center;
-            /* Details font dans les légendes des images */
-            font-family: monospace; 
-            font-size: 12px;
-
-        }
-
-        .bloc_une_photo_plus_legende img {
-            width: 300px; /* Put 100% here if you prefer */
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-
+       
         /* Responsive for Desktops: 3 columns */
         @media (min-width: 1024px) {
-            .bloc_une_photo_plus_legende {
+            .intro_text {
                 width: calc(33.33% - 20px); /* Adjust 20px for horizontal space */
             }
+
+            .spider-icon {
+    width: 80px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
         }
 
         /* Responsive for Tablets: 2 columns */
         @media (min-width: 768px) and (max-width: 1023px) {
-            .bloc_une_photo_plus_legende {
+            .intro_text {
                 width: calc(50% - 15px); /* Adjust 15px for horizontal space */
             }
-        }
+            .spider-icon {
+    width: 70px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}  
+      }
 
         /* Responsive for Mobile: 1 column */
         @media (max-width: 767px) {
-            .galerie_toutes_les_photos {
+            .intro_text {
                 justify-content: center;
             }
             .bloc_une_photo_plus_legende {
                 width: 100%;
             }
+            .spider-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
         }
     </style>
 </head>
 <body>
 
     <div class="intro_text">
-        <p>It's not a question anymore.</p>
-        <p>Here you will find works that are still available to sell.</p>
+        <p>To sell or not to sell...? it's not a question anymore.</p>
+        <p>You will soom find works that are still available to sell.</p>
         <p>By interest in purchasing any of the works or visiting my studio, you can contact me through <a href="mailto:lilypellaud@gmail.com">lilypellaud@gmail.com</a></p>
     </div>
 
-    <div class="galerie_toutes_les_photos">
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="DSC_0036-Edit-Bearbeitet.jpg" alt="Staples on the wall">
-            <p>L'écho des combles, 2023</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="DSC_0046.jpg" alt="Hold the house together">
-            <p>L'écho des combles, 2023</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="DSC_0139-Edit.jpg" alt="Le parquet se soulève en signe de protestation">
-            <p>L'écho des combles, 2023</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="8X4A0265-2.jpg" alt="Description of image 4">
-            <p>To be remembered, 2022</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="8X4A0269-2.jpg" alt="Description of image 5">
-            <p>To be remembered, 2022</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="8X4A0270-2.jpg" alt="Description of image 6">
-            <p>To be remembered, 2022</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="8X4A0272.jpg" alt="Description of image 7">
-            <p>To be remembered, 2022</p>
-        </div>
-
-        <!-- Repeat this block for each image -->
-        <div class="bloc_une_photo_plus_legende">
-            <img src="8X4A0274.jpg" alt="Description of image 8">
-            <p>To be remembered, 2022</p>
-        </div>
-    </div>
 </body>
 </html>
