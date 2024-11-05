@@ -19,6 +19,14 @@
       background-position: center; /* Center the background image */
       cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
     }
+
+    .content {
+  flex-grow: 1; /* Makes the content take available space and pushes the footer down */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  align-items: center; /* Horizontally centers content */
+}
     .contact-icons {
   display: flex;
   justify-content: center; /* Centers the icons horizontally */
