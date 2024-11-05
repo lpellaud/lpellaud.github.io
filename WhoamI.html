@@ -26,6 +26,18 @@
       cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
     }
 
+    .return-icon {
+    position: fixed; /* Keeps it in a fixed position */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+    .spider-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
     p {
       text-align: center;
       max-width: 800px;
@@ -38,6 +50,11 @@
       body {
         font-size: 16pt; /* Adjust font size for tablets */
       }
+
+      .spider-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
     }
 
     @media (max-width: 768px) {
@@ -49,10 +66,21 @@
         font-size: 12pt; /* Adjust font size for phones */
         max-width: 100%; /* Full width paragraphs on smaller screens */
       }
+
+      .spider-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
     }
   </style>
 </head>
 <body>
+
+  <!-- spider Icon for return Index -->
+  <a href="index.html" class="return-icon">
+    <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Return to Index" class="spider-icon">
+</a>
+
   <p>Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
   Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
   Sprouting from personal observations, her works blend the boundaries of public and private.
