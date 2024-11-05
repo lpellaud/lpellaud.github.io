@@ -18,14 +18,14 @@
       color: rgb(255, 162, 0);
       font-size: 20pt;
       display: flex;
-      flex-direction: column; /* Stack content vertically */
-      justify-content: center; /* Align to the top */
+      flex-direction: column; /* Stack children vertically */
+      justify-content: space-between; /* Space between content and footer */
       height: 100vh; /* Ensure the body takes up the full height of the viewport */
       background-image: url(https://www.publicdomainpictures.net/pictures/270000/velka/blue-fabric-background-1534547385sUM.jpg);
       background-size: cover;
       background-position: center;
       cursor: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/spidercursor.png') 16 16, auto;
-}
+    }
 
     .content {
       display: flex;
@@ -35,17 +35,15 @@
       max-width: 800px;
       padding: 20px;
       flex-grow: 1; /* Makes sure the content takes up the available space */
-  margin-bottom: 20px; /* Ensure space at the bottom before the footer */
     }
 
     /* Footer Styling */
     footer {
             width: 100%;
             text-align: center;
-            margin-bottom: 20px;
-            margin-top: 20px; /* Add margin to the bottom of the footer */
             color:rgb(255, 162, 0);
             font-size: 0.9rem;
+            padding: 10px 0; /* Add some padding for better spacing */
         }
 
 
