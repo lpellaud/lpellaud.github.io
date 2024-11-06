@@ -4,24 +4,23 @@
   <title>About me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-
+    /* Center everything using Flexbox */
     body {
-    
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      font-style: normal;
-      font-style: normal;
       color: rgb(255, 162, 0);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh; /* Full viewport height */
-      background-image: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/tissu foncé.jpg'); /* Background image */
+      margin: 0; /* Remove default margin */
+      background-image: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/tissu%20foncé.jpg'); /* Background image */
       background-size: cover; /* Cover the entire background */
       background-position: center; /* Center the background image */
-      
+    }
 
+    /* Content container */
     .content {
       display: flex;
       flex-direction: column;
@@ -29,189 +28,183 @@
       align-items: center;
       text-align: center;
       flex-grow: 1; /* Allow content to take available space */
-      text-align: center; /* Center text alignment */
       margin: 0 20px; /* Margin to prevent content from touching the edges */
     }
 
-    /* Footer Styling */
-    footer {
-            width: 100%;
-            text-align: center;
-            color:rgb(255, 162, 0);
-            font-size: 0.9rem;
-            font-weight:lighter ;
-            margin-bottom: 20px; /* Space from bottom */
-            margin-top: auto;
-        }
-
-
-    /* House Icon Styling */
-    .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            cursor: pointer;
-           
-        }
-
-        /* Image size for the spider icon */
-        .home-icon {
-            width: 80px; /* Adjust the size as needed */
-            height: 80px; /* Adjust the size as needed */
-        }
-
-        /* Dropdown Menu Styling */
-        .dropdown-menu {
-            display: none; /* Initially hidden */
-            position: absolute;
-            top: 110px;
-            right: 20px;
-            background-color: #131313;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
-        }
-
-        .dropdown-menu a {
-            color: rgb(238, 214, 235);
-            text-decoration: none;
-            display: block;
-            padding: 8px;
-            font-size: 18px;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: rgb(255, 162, 0);
-        }
-
+    /* Paragraph styling */
     p {
       font-size: 18pt;
       color: rgb(255, 162, 0);
       max-width: 650px;
       margin: 20px 0;
       line-height: 1.5;
-    }   
-  
-  }
+    }
+
+    /* Footer Styling */
+    footer {
+      width: 100%;
+      text-align: center;
+      color: rgb(255, 162, 0);
+      font-size: 0.9rem;
+      font-weight: lighter;
+      margin-top: auto;
+      margin-bottom: 20px; /* Space from bottom */
+    }
+
+    /* Menu Icon Styling */
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* Image size for the spider icon */
+    .home-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* Dropdown Menu Styling */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 110px;
+      right: 20px;
+      background-color: #131313;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+    }
+
+    .dropdown-menu a {
+      color: rgb(238, 214, 235);
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      font-size: 18px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: rgb(255, 162, 0);
+    }
 
     /* Responsive Styles */
     @media (max-width: 1024px) {
       body {
-        font-size: 16pt; /* Adjust font size for tablets */
+        font-size: 16pt;
       }
 
       footer {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
+        font-size: 1rem;
+      }
 
-            .menu-icon {
-                font-size: 30px;
-                top: 20px;
-                right: 20px;
-            }
-            .dropdown-menu a {
-              font-size: 16px;
-              padding: 8px;
-            }
+      .menu-icon {
+        font-size: 30px;
+        top: 20px;
+        right: 20px;
+      }
+
+      .dropdown-menu a {
+        font-size: 16px;
+        padding: 8px;
+      }
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-
-.menu-icon {
-            font-size: 28px;
-            top: 20px;
-            right: 20px;
-        }
-        .dropdown-menu a {
-          font-size: 16px;
-          padding: 8px;
-        }
-
+      .menu-icon {
+        font-size: 28px;
+        top: 20px;
+        right: 20px;
       }
+
+      .dropdown-menu a {
+        font-size: 16px;
+        padding: 8px;
+      }
+    }
 
     @media (max-width: 767px) {
       body {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        padding: 20px; /* Add padding to body */
+        flex-direction: column;
+        padding: 20px;
       }
-      p {
-        font-size: 12pt; /* Adjust font size for phones */
-        max-width: 100%; /* Full width paragraphs on smaller screens */
-      }
-      footer {
-                font-size: 0.8rem;
-                margin-bottom: 15px; /* Add margin to the bottom of the footer */
-              } 
 
-              .menu-icon {
-                font-size: 35px;
-                top: 15px;
-                right: 15px;
-            }
-            .dropdown-menu a {
-              font-size: 16px;
-              padding: 8px;
-            }
+      p {
+        font-size: 12pt;
+        max-width: 100%;
+      }
+
+      footer {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+      }
+
+      .menu-icon {
+        font-size: 35px;
+        top: 15px;
+        right: 15px;
+      }
+
+      .dropdown-menu a {
+        font-size: 16px;
+        padding: 8px;
+      }
     }
   </style>
 </head>
 <body>
-<div class="content">
- 
 
-  <p>Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
-  Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
-  Sprouting from personal observations, her works blend the boundaries of public and private.
-  Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
-  exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
-  Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
+  <div class="content">
+    <!-- About me text -->
+    <p>Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
+    Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
+    Sprouting from personal observations, her works blend the boundaries of public and private.
+    Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
+    exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
+    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
 
-  <!-- spider Icon for dropdown Menu -->
-<div class="menu-icon" onclick="toggleMenu(event)">
-  <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
-</div>
+    <!-- Spider Icon for dropdown Menu -->
+    <div class="menu-icon" onclick="toggleMenu(event)">
+      <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
+    </div>
 
-<!-- Dropdown Menu -->
-<div class="dropdown-menu" id="dropdownMenu">
-  <a href="index.html"> Home</a>
-  <a href="WhoamI.html"> About</a>
-  <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-  <a href="archive.html"> Archive</a>
-  <a href="contact.html"> Contact</a>
-  <a href="Tosellornottosell.html"> To sell</a>
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="WhoamI.html">About</a>
+      <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
+      <a href="archive.html">Archive</a>
+      <a href="contact.html">Contact</a>
+      <a href="Tosellornottosell.html">To Sell</a>
+    </div>
+  </div>
 
-</div>
+  <!-- Footer with Dynamic Year -->
+  <footer>
+    &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
+  </footer>
 
+  <script>
+    // JavaScript to dynamically set the current year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
- <!-- Footer with Dynamic Year -->
- <footer>
-  &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
-</footer>
-</div>
+    // JavaScript to toggle dropdown menu visibility
+    function toggleMenu(event) {
+      event.stopPropagation(); // Prevent event bubbling
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
 
-<script>
-  // JavaScript to dynamically set the current year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // JavaScript to toggle dropdown menu visibility
-  function toggleMenu(event) {
-            event.stopPropagation(); //Prevent event bubbling
-            const dropdown = document.getElementById('dropdownMenu');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        }
-
-        // Optional: Close the dropdown if clicked outside
-        window.onclick = function(event) {
-            const dropdown = document.getElementById('dropdownMenu');
-            if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') 
-                dropdown.style.display = 'none';        
-            
-            }
-</script>
+    // Optional: Close the dropdown if clicked outside
+    window.onclick = function(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+      }
+    };
+  </script>
 
 </body>
-
 </html>
-
