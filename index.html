@@ -34,21 +34,33 @@
             color: rgb(0, 0, 0);
             font-size: larger;
             white-space: nowrap;
-            animation: stretch 2s forwards;
+            animation: stretch 1s forwards;
         }
 
-        @keyframes stretch {
-            0% {
-                transform: scale(1); /* Normal size */
-            }
-            50% {
-                transform: scale(5); /* Stretch to 120% */
-            }
-            100% {
-                transform: scale(1); /* Normal size */
-            }
+        @keyframes shakeAndSpring {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    20% {
+        transform: scale(1.2); /* Slightly larger */
+    }
+    40% {
+        transform: scale(0.9); /* Slightly smaller */
+    }
+    60% {
+        transform: scale(1.3); /* Bigger stretch */
+    }
+    80% {
+        transform: scale(0.95); /* Smaller, closer to normal */
+    }
+    100% {
+        transform: scale(1); /* Back to normal */
+    }
+}
 
-        }
+.element {
+    animation: shakeAndSpring 0.8s ease-in-out infinite; /* Adjust duration and easing as needed */
+}
 
         h3, h4 {
             margin: 0;
