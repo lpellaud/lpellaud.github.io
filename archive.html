@@ -8,251 +8,166 @@
       margin: 50px;
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      font-style: normal;
-      font-style: normal;
       background: 
         linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
         linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
         white;
-      background-size: 200px 100px; /* Adjust the size of the squares */
-      background-position: 0 0, 150px 1px; /* Shift the second layer to create the checkerboard */
-    }
-    .same.size {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
+      background-size: 200px 100px;
+      background-position: 0 0, 150px 1px;
     }
 
-    .same.size img {
-      width: 80%; /* Image width is 80% of its container */
-      max-width: 500px; /* Set a maximum width for large screens */
-      margin-bottom: 20px;
+    /* Flex container to center all images */
+    .same.size {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Center and size each image container */
+    .bloc_une_photo_plus_legende {
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .bloc_une_photo_plus_legende img {
+      width: 100%; /* Adjusted to take full width of the container */
     }
 
     /* Footer Styling */
     footer {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px; /* Add margin to the bottom of the footer */
-            margin-top: auto;
-            color:  #FFD700;
-            font-size: 0.9rem;
-            font-weight: lighter;
-        }
-
-
-     /* House Icon Styling */
-     .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            cursor: pointer;
-           
-        }
-
-        /* Image size for the spider icon */
-        .home-icon {
-            width: 80px; /* Adjust the size as needed */
-            height: 80px; /* Adjust the size as needed */
-        }
-
-        /* Dropdown Menu Styling */
-        .dropdown-menu {
-            display: none; /* Initially hidden */
-            position: absolute;
-            top: 110px;
-            right: 20px;
-            background-color: #131313;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
-        }
-
-        .dropdown-menu a {
-            color: rgb(238, 214, 235);
-            text-decoration: none;
-            text-align: center;
-            display: block;
-            padding: 8px;
-            font-size: 18px;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #ff61bd;
-        }
-
-      
-
-    @media (min-width: 1024px) {
-      .bloc_une_photo_plus_legende {
-    width: 90%; /* Take up 90% of the width on larger screens */
-    max-width: 600px; /* Optional: set a maximum width */
-    margin: 0 auto; /* Center the container */
-    display: flex;
-    text-align: center;
-      }
-
-      footer {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-
-            .menu-icon {
-                font-size: 30px;
-                top: 20px;
-                right: 20px;
-            }
-            .dropdown-menu a {
-              font-size: 16px;
-              padding: 8px;
-            }
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #FFD700;
+      font-size: 0.9rem;
+      font-weight: lighter;
     }
 
-    /* Responsive for Tablets: 2 columns */
-    @media (min-width: 768px) and (max-width: 1023px) {
-      @media (min-width: 768px) and (max-width: 1023px) {
-  .bloc_une_photo_plus_legende {
-    width: 85%; /* Slightly smaller width for tablets */
-    max-width: 500px; /* Adjust maximum width for smaller screens */
-    margin: 0 auto;
-    display: flex;
-    text-align: center;
-  }
-      }
-      footer {
-                font-size: 0.9rem;
-                margin-bottom: 18px; /* Add margin to the bottom of the footer */
-              }
-              .menu-icon {
-            font-size: 28px;
-            top: 20px;
-            right: 20px;
-        }
-        .dropdown-menu a {
-          font-size: 16px;
-          padding: 8px;
-        }
+    /* Menu Icon Styling */
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
     }
 
-    /* Responsive for Mobile: 1 column */
-    @media (max-width: 767px) {
-      .galerie_toutes_les_photos {
-        justify-content: center;
-      }
-      .bloc_une_photo_plus_legende {
-    width: 95%; /* Nearly full width for smaller mobile screens */
-    margin: 0 auto;
-    display: flex;
-    text-align: center;
-  }
-      }
-      footer {
-                font-size: 0.8rem;
-                margin-top: auto;
-                margin-bottom: 15px; /* Add margin to the bottom of the footer */
-              } 
-              .menu-icon {
-                font-size: 35px;
-                top: 15px;
-                right: 15px;
-            }
-            .dropdown-menu a {
-              font-size: 16px;
-              padding: 8px;
-            }
-          
-    
+    .home-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* Dropdown Menu Styling */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 110px;
+      right: 20px;
+      background-color: #131313;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu a {
+      color: rgb(238, 214, 235);
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 8px;
+      font-size: 18px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #ff61bd;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Flex container for centering images -->
   <div class="same size">
     <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.instagram.com/p/C_SjBr2K5V9/" target="_blank">
-      <img src="Screenshot Papillarya.png" width="300">
-    </a>
+      <a href="https://www.instagram.com/p/C_SjBr2K5V9/" target="_blank">
+        <img src="Screenshot Papillarya.png" alt="Image 1">
+      </a>
     </div>
     <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.instagram.com/p/C-P20jwsVc6/?img_index=9" target="_blank">
-      <img src="plestelin.png" width="300">
-    </a>
+      <a href="https://www.instagram.com/p/C-P20jwsVc6/?img_index=9" target="_blank">
+        <img src="plestelin.png" alt="Image 2">
+      </a>
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <a href="https://www.instagram.com/p/C-FDXYvoLse/" target="_blank">
+        <img src="345_8.jpg" alt="Image 3">
+      </a>
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <a href="https://www.instagram.com/ode_to_ideas/" target="_blank">
+        <img src="THEWAITINGROOM.jpg" alt="Image 4">
+      </a>
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <a href="https://www.zhdk.ch/en/research/ifcar/thomas-isler-how-does-landscape-sound-2023-19919" target="_blank">
+        <img src="IFCARPOSTER.jpg" alt="Image 5">
+      </a>
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <a href="https://www.zhdk.ch/veranstaltung/52011" target="_blank">
+        <img src="wonky and skewed.jpg" alt="Image 6">
+      </a>
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <img src="Untitled 2-3.jpg" alt="Image 7">
+    </div>
+    <div class="bloc_une_photo_plus_legende">
+      <a href="https://www.instagram.com/zhdkfinearts/reel/Cq59syQosoC/" target="_blank">
+        <img src="Screenshot (99).png" alt="Image 8">
+      </a>
+    </div>
   </div>
-    
-    <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.instagram.com/p/C-FDXYvoLse/" target="_blank">
-      <img src="345_8.jpg" width="300">
-    </a>
-   </div>
-    
-    <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.instagram.com/ode_to_ideas/" target="_blank">
-      <img src="THEWAITINGROOM.jpg" width="300">
-    </a>
-   </div>
-    
-    <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.zhdk.ch/en/research/ifcar/thomas-isler-how-does-landscape-sound-2023-19919" target="_blank">
-      <img src="IFCARPOSTER.jpg" width="300">
-    </a>
-  </div>
-    
-    <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.zhdk.ch/veranstaltung/52011" target="_blank">
-      <img src="wonky and skewed.jpg" width="300">
-    </a>
-  </div>
-    
-    <div class="bloc_une_photo_plus_legende">
-    <img src="Untitled 2-3.jpg" width="300">
-</div>
-  <div class="bloc_une_photo_plus_legende">
-    <a href="https://www.instagram.com/zhdkfinearts/reel/Cq59syQosoC/" target="_blank">
-    <img src="Screenshot (99).png" width="300">
-  </a>
- </div>
-   
 
-    <!-- spider Icon for dropdown Menu -->
-    <div class="menu-icon" onclick="toggleMenu(event)">
-      <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
+  <!-- Spider Icon for dropdown Menu -->
+  <div class="menu-icon" onclick="toggleMenu(event)">
+    <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
   </div>
 
   <!-- Dropdown Menu -->
   <div class="dropdown-menu" id="dropdownMenu">
-      <a href="index.html"> Home</a>
-      <a href="WhoamI.html"> About</a>
+      <a href="index.html">Home</a>
+      <a href="WhoamI.html">About</a>
       <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-      <a href="archive.html"> Archive</a>
-      <a href="contact.html"> Contact</a>
-      <a href="Tosellornottosell.html"> To sell</a>
-
+      <a href="archive.html">Archive</a>
+      <a href="contact.html">Contact</a>
+      <a href="Tosellornottosell.html">To Sell</a>
   </div>
-     <!-- Footer with Dynamic Year -->
+
+  <!-- Footer with Dynamic Year -->
   <footer>
     &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
-</footer>
+  </footer>
 
-<script>
+  <script>
     // JavaScript to dynamically set the current year
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // JavaScript to toggle dropdown menu visibility
     function toggleMenu(event) {
-            event.stopPropagation(); //Prevent event bubbling
-            const dropdown = document.getElementById('dropdownMenu');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        }
+      event.stopPropagation();
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
 
-        // Optional: Close the dropdown if clicked outside
-        window.onclick = function(event) {
-            const dropdown = document.getElementById('dropdownMenu');
-            if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') 
-                dropdown.style.display = 'none';        
-            
-            }
-</script>
+    // Optional: Close the dropdown if clicked outside
+    window.onclick = function(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+      }
+    };
+  </script>
 
-  </div>
 </body>
 </html>
