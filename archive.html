@@ -24,7 +24,9 @@
     }
 
     .same.size img {
-      margin-bottom: 20px; /* Adjust spacing between images */
+      width: 80%; /* Image width is 80% of its container */
+      max-width: 500px; /* Set a maximum width for large screens */
+      margin-bottom: 20px;
     }
 
     /* Footer Styling */
@@ -77,14 +79,16 @@
         }
 
         .dropdown-menu a:hover {
-            background-color:  #fbed24;
+            background-color:  #e31515;
         }
 
       }
 
     @media (min-width: 1024px) {
       .bloc_une_photo_plus_legende {
-        width: calc(80% - 20px); /* Adjust 20px for horizontal space */
+    width: 90%; /* Take up 90% of the width on larger screens */
+    max-width: 600px; /* Optional: set a maximum width */
+    margin: 0 auto; /* Center the container */
       }
 
       footer {
@@ -105,8 +109,12 @@
 
     /* Responsive for Tablets: 2 columns */
     @media (min-width: 768px) and (max-width: 1023px) {
-      .bloc_une_photo_plus_legende {
-        width: calc(90% - 15px); /* Adjust 15px for horizontal space */
+      @media (min-width: 768px) and (max-width: 1023px) {
+  .bloc_une_photo_plus_legende {
+    width: 85%; /* Slightly smaller width for tablets */
+    max-width: 500px; /* Adjust maximum width for smaller screens */
+    margin: 0 auto;
+  }
       }
       footer {
                 font-size: 0.9rem;
@@ -129,7 +137,9 @@
         justify-content: center;
       }
       .bloc_une_photo_plus_legende {
-        width: calc(95% - 15px); /* Adjust 15px for horizontal space */
+    width: 95%; /* Nearly full width for smaller mobile screens */
+    margin: 0 auto;
+  }
       }
       footer {
                 font-size: 0.8rem;
@@ -144,7 +154,7 @@
               font-size: 16px;
               padding: 8px;
             }
-      }
+          
     
   </style>
 </head>
