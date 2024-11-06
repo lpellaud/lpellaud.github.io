@@ -20,17 +20,44 @@
             color: #000000;
         }
 
-        .return-icon {
-    position: fixed; /* Keeps it in a fixed position */
-    top: 20px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    z-index: 1000; /* Ensures it stays above other elements */
-}
+        /* House Icon Styling */
+  .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+           
+        }
 
-    .spider-icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
+        /* Image size for the spider icon */
+        .home-icon {
+            width: 80px; /* Adjust the size as needed */
+            height: 80px; /* Adjust the size as needed */
+        }
+       /* Dropdown Menu Styling */
+       .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 110px;
+            right: 20px;
+            background-color: #131313;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        }
+
+        .dropdown-menu a {
+            color: rgb(238, 214, 235);
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+            font-size: 18px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(66, 45, 151);
+        }
 
     /* Footer Styling */
     footer {
@@ -63,7 +90,7 @@
        
         /* Responsive for Desktops: 3 columns */
         @media (min-width: 1024px) {
-            .intro_text {
+         .intro_text {
                 width: calc(33.33% - 20px); /* Adjust 20px for horizontal space */
             }
 
@@ -73,11 +100,18 @@
                 margin-bottom: 20px;
             }
 
-            .spider-icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-        }
+
+        .menu-icon {
+                font-size: 30px;
+                top: 20px;
+                right: 20px;
+            }
+            .dropdown-menu a {
+                font-size: 15px;
+            }
+
+        
+    }
 
         /* Responsive for Tablets: 2 columns */
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -90,11 +124,17 @@
                 margin-bottom: 18px; /* Add margin to the bottom of the footer */
 
             }
-            .spider-icon {
-    width: 70px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}  
-      }
+            
+        .menu-icon {
+            font-size: 28px;
+            top: 20px;
+            right: 20px;
+        }
+        .dropdown-menu a {
+            font-size: 16px;
+        }
+
+    
 
         /* Responsive for Mobile: 1 column */
         @media (max-width: 767px) {
@@ -110,11 +150,17 @@
                 font-size: 1rem;
                 margin-bottom: 15px; /* Add margin to the bottom of the footer */
               } 
-            .spider-icon {
-    width: 60px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-        }
+              .menu-icon {
+                font-size: 35px;
+                top: 15px;
+                right: 15px;
+            }
+            .dropdown-menu a {
+                font-size: 16px;
+            }
+
+}   
+}  
     </style>
 </head>
 <body>
@@ -125,11 +171,6 @@
     
     </div>
 
-    <!-- spider Icon for return Index -->
-  <a href="index.html" class="return-icon">
-    <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Return to Index" class="spider-icon">
-</a>
-
      <!-- Footer with Dynamic Year -->
   <footer>
     &copy; <span id="year"></span> Lily Pellaud. All rights reserved.
@@ -138,7 +179,7 @@
 <script>
     // JavaScript to dynamically set the current year
     document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    </script>
 
 </body>
 </html>

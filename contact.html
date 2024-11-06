@@ -57,17 +57,46 @@
           }
 
 
-    .return-icon {
-    position: fixed; /* Keeps it in a fixed position */
-    top: 20px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    z-index: 1000; /* Ensures it stays above other elements */
-}
+  /* House Icon Styling */
+  .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+           
+        }
 
-    .spider-icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
+        /* Image size for the spider icon */
+        .home-icon {
+            width: 80px; /* Adjust the size as needed */
+            height: 80px; /* Adjust the size as needed */
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 110px;
+            right: 20px;
+            background-color: #131313;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        }
+
+        .dropdown-menu a {
+            color: rgb(238, 214, 235);
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+            font-size: 18px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(207, 91, 161);
+        }
+
 
     /* Media Queries for responsiveness */
     @media (max-width: 1024px) {
@@ -81,13 +110,32 @@
       footer {
                 font-size: 1rem;
             }
-      .spider-icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-      }
+            .menu-icon {
+                font-size: 30px;
+                top: 20px;
+                right: 20px;
+            }
+            .dropdown-menu a {
+                font-size: 15px;
+            }
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
+
+    .menu-icon {
+                font-size: 28px;
+                top: 20px;
+                right: 20px;
+            }
+            .dropdown-menu a {
+                font-size: 16px;
+            }
+
+          }
+
+
+
+    @media (max-width: 767px) {
       body {
         font-size: 30pt; /* Adjust font size for phones */
       }
@@ -100,19 +148,20 @@
                 margin-bottom: 15px; /* Add margin to the bottom of the footer */
               }      
 
-      .spider-icon {
-    width: 50px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+              .menu-icon {
+                font-size: 35px;
+                top: 15px;
+                right: 15px;
+            }
+            .dropdown-menu a {
+                font-size: 16px;
+            }
 }
-    }
+    
   </style>
 </head>
 <body>
 
-  <!-- spider Icon for return Index -->
-  <a href="index.html" class="return-icon">
-    <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Return to Index" class="spider-icon">
-</a>
 
 <div class="content">
   <div class="contact-icons">
