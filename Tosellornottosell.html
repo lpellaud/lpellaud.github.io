@@ -45,6 +45,7 @@
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+            width: 200px
         }
 
         .dropdown-menu a {
@@ -52,8 +53,8 @@
             text-decoration: none;
             text-align: center;
             display: block;
-            padding: 8px;
-            font-size: 18px;
+            padding: 8px 10px;
+            font-size: 16px;
         }
 
         .dropdown-menu a:hover {
@@ -108,13 +109,15 @@
                 top: 20px;
                 right: 20px;
             }
-            .dropdown-menu a {
-                font-size: 16px;
-                padding: 8px;
-            }
-
-        
+            .dropdown-menu {
+        width: 250px; /* Adjust as needed for larger screens */
     }
+
+    .dropdown-menu a {
+        font-size: 18px; /* Adjust for larger screen size */
+    }
+}
+
 
         /* Responsive for Tablets: 2 columns */
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -133,11 +136,17 @@
             top: 20px;
             right: 20px;
         }
-        .dropdown-menu a {
-            font-size: 16px;
-                padding: 8px;
-        }
+    }
+        
+        @media (min-width: 768px) and (max-width: 1023px) {
+    .dropdown-menu {
+        width: 220px; /* Adjust for tablet size */
+    }
 
+    .dropdown-menu a {
+        font-size: 16px; /* Adjust font size for consistency */
+    }
+}
     
 
         /* Responsive for Mobile: 1 column */
@@ -159,13 +168,18 @@
                 top: 15px;
                 right: 15px;
             }
-            .dropdown-menu a {
-                font-size: 16px;
-                padding: 8px;
-            }
+            @media (max-width: 767px) {
+    .dropdown-menu {
+        width: 180px; /* Adjust for smaller screens */
+    }
 
-}   
-}  
+    .dropdown-menu a {
+        font-size: 15px; /* Slightly smaller font for mobile */
+    }
+}
+}
+
+
     </style>
 </head>
 <body>
