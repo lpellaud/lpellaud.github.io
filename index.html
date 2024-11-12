@@ -10,10 +10,7 @@
   
   <style>
         /* Font and Basic Body Styling */
-    
-        
-
-            body {
+        body {
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,13 +19,13 @@
             align-items: center; /* Vertically centers the title */
             min-height: 100vh; /* Makes sure the body takes the full height of the viewport */
             text-align: center; /* Centers the text */
-            background-image: url('https://raw.githubusercontent.com/lpellaud/lpellaud-images/main/backdrop%20pink.jpg');
+            background-image: url('./assets/backgrounds/backdrop\ pink.jpg');
             background-size: cover;
             background-position: center;
             font-family: 'Sans Source Pro', sans-serif;
             font-weight: bold;
-            font-style: normal;        }
-
+            font-style: normal;
+        }
 
         h1 {
             color: rgb(0, 0, 0);
@@ -38,26 +35,25 @@
         }
 
         @keyframes stretch {
-    0% {
-        transform: scale(1); /* Normal size */
-    }
-    20% {
-        transform: scale(3); /* Slightly larger */
-    }
-    40% {
-        transform: scale(0.9); /* Slightly smaller */
-    }
-    60% {
-        transform: scale(2.5); /* Bigger stretch */
-    }
-    80% {
-        transform: scale(0.95); /* Smaller, closer to normal */
-    }
-    100% {
-        transform: scale(1); /* Back to normal */
-    }
-}
-
+            0% {
+                transform: scale(1); /* Normal size */
+            }
+            20% {
+                transform: scale(3); /* Slightly larger */
+            }
+            40% {
+                transform: scale(0.9); /* Slightly smaller */
+            }
+            60% {
+            transform: scale(2.5); /* Bigger stretch */
+            }
+            80% {
+            transform: scale(0.95); /* Smaller, closer to normal */
+            }
+            100% {
+            transform: scale(1); /* Back to normal */
+            }
+        }
 
         h3, h4 {
             margin: 0;
@@ -71,6 +67,7 @@
             align-items: center; /* Vertically centers in case there's more content */
             flex: 1; /* Allows the container to grow and take available space */
         }
+
         /* Footer Styling */
         footer {
             width: 100%;
@@ -82,7 +79,7 @@
             font-weight: lighter;
         }
 
-        /* House Icon Styling */
+        /* Menu Icon Styling */
         .menu-icon {
             position: absolute;
             top: 20px;
@@ -205,16 +202,16 @@
 
     <!-- spider Icon for dropdown Menu -->
     <div class="menu-icon" onclick="toggleMenu(event)">
-        <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
+        <img src="./assets/icons/spidercursor.png" alt="Menu Icon" class="home-icon">
     </div>
 
     <!-- Dropdown Menu -->
     <div class="dropdown-menu" id="dropdownMenu">
-        <a href="WhoamI.html"> About</a>
+        <a href="about.html"> About</a>
         <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
         <a href="archive.html"> Archive</a>
         <a href="contact.html"> Contact</a>
-        <a href="Tosellornottosell.html"> To sell</a>
+        <a href="shop.html"> To sell</a>
 
     </div>
 

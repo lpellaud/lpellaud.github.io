@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Archive</title>
+  <title>About me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Center everything using Flexbox */
     body {
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      padding-top: 110px;
       color: rgb(255, 162, 0);
       display: flex;
       flex-direction: column;
@@ -16,42 +15,29 @@
       align-items: center;
       min-height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
-      background: 
-        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        white;
-      background-size: 200px 100px;
-      background-position: 0 0, 150px 1px;
+      background-image: url('./assets/backgrounds/tissu\ foncé.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
     }
 
-      /* Content container */
-      .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-grow: 1; /* Allow content to take available space */
-        margin: 0 20px; /* Margin to prevent content from touching the edges */
-    }
-
-    /* Flex container to center all images */
-    .same.size {
+    /* Content container */
+    .content {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-    }
-
-    /* Center and size each image container */
-    .bloc_une_photo_plus_legende {
-      width: 80%;
-      max-width: 500px;
-      margin: 0 auto 20px;
       text-align: center;
+      flex-grow: 1; /* Allow content to take available space */
+      margin: 0 20px; /* Margin to prevent content from touching the edges */
     }
 
-    .bloc_une_photo_plus_legende img {
-      width: 100%; /* Adjusted to take full width of the container */
+    /* Paragraph styling */
+    p {
+      font-size: 18pt;
+      color: rgb(255, 162, 0);
+      max-width: 650px;
+      margin: 20px 0;
+      line-height: 1.5;
     }
 
     /* Footer Styling */
@@ -98,7 +84,6 @@
       display: block;
       padding: 8px;
       font-size: 18px;
-      align-items: center;      
     }
 
     .dropdown-menu a:hover {
@@ -109,7 +94,6 @@
     @media (max-width: 1024px) {
       body {
         font-size: 16pt;
-        flex-direction: column;
       }
 
       footer {
@@ -129,9 +113,12 @@
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-      body {
-        flex-direction: column;
+      
+      p{
+        font-size: 14pt;
+        max-width: 70%;
       }
+
       .menu-icon {
         font-size: 28px;
         top: 20px;
@@ -144,9 +131,34 @@
       }
     }
 
-    @media (max-width: 767px) {
+    @media (min-width: 480px) and (max-width: 767px) {
+      
+      p{
+        font-size: 12pt;
+        max-width: 70%;
+      }
+
+      .menu-icon {
+        font-size: 28px;
+        top: 20px;
+        right: 20px;
+      }
+
+      .dropdown-menu a {
+        font-size: 16px;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 479px) {
       body {
         flex-direction: column;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 12pt;
+        max-width: 90%;
       }
 
       footer {
@@ -170,47 +182,13 @@
 <body>
 
   <div class="content">
-    <!-- Flex container for centering images -->
-    <div class="same size">
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C_SjBr2K5V9/" target="_blank">
-          <img src="./assets/archive/Screenshot Papillarya.png" alt="Image 1">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C-P20jwsVc6/?img_index=9" target="_blank">
-          <img src="./assets/archive/plestelin.png" alt="Image 2">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C-FDXYvoLse/" target="_blank">
-          <img src="./assets/archive/345_8.jpg" alt="Image 3">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/ode_to_ideas/" target="_blank">
-          <img src="./assets/archive/THEWAITINGROOM.jpg" alt="Image 4">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.zhdk.ch/en/research/ifcar/thomas-isler-how-does-landscape-sound-2023-19919" target="_blank">
-          <img src="./assets/archive/IFCARPOSTER.jpg" alt="Image 5">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.zhdk.ch/veranstaltung/52011" target="_blank">
-          <img src="./assets/archive/wonky and skewed.jpg" alt="Image 6">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <img src="./assets/archive/Untitled 2-3.jpg" alt="Image 7">
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/zhdkfinearts/reel/Cq59syQosoC/" target="_blank">
-          <img src="./assets/archive/Screenshot (99).png" alt="Image 8">
-        </a>
-      </div>
-    </div>
+    <!-- About me text -->
+    <p>Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
+    Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
+    Sprouting from personal observations, her works blend the boundaries of public and private.
+    <br><br>Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
+    exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
+    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
 
     <!-- Spider Icon for dropdown Menu -->
     <div class="menu-icon" onclick="toggleMenu(event)">
@@ -227,7 +205,6 @@
       <a href="shop.html">To Sell</a>
     </div>
   </div>
-</div>
 
   <!-- Footer with Dynamic Year -->
   <footer>

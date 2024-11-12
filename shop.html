@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About me</title>
+  <title>Shop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Center everything using Flexbox */
@@ -15,7 +15,7 @@
       align-items: center;
       min-height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
-      background-image: url('https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/tissu%20foncé.jpg'); /* Background image */
+      background-image: url('./assets/backgrounds/tissu\ foncé.jpg'); /* Background image */
       background-size: cover; /* Cover the entire background */
       background-position: center; /* Center the background image */
     }
@@ -113,6 +113,11 @@
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
+
+      p{
+        max-width: 70%;
+      }
+
       .menu-icon {
         font-size: 28px;
         top: 20px;
@@ -133,7 +138,7 @@
 
       p {
         font-size: 12pt;
-        max-width: 100%;
+        max-width: 70%;
       }
 
       footer {
@@ -158,26 +163,21 @@
 
   <div class="content">
     <!-- About me text -->
-    <p>Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
-    Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
-    Sprouting from personal observations, her works blend the boundaries of public and private.
-    Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
-    exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
-    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
+    <p>Or not to sell...?<br>It's not a question anymore.<br><br>You will soon find on this page, works that will be available for purchase.</p>
 
     <!-- Spider Icon for dropdown Menu -->
     <div class="menu-icon" onclick="toggleMenu(event)">
-      <img src="https://raw.githubusercontent.com/lpellaud/lpellaud.github.io/main/image%20icon/spidercursor.png" alt="Menu Icon" class="home-icon">
+      <img src="./assets/icons/SpiderCursorOrange.svg" alt="Menu Icon" class="home-icon">
     </div>
 
     <!-- Dropdown Menu -->
     <div class="dropdown-menu" id="dropdownMenu">
       <a href="index.html">Home</a>
-      <a href="WhoamI.html">About</a>
+      <a href="about.html">About</a>
       <a href="PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
       <a href="archive.html">Archive</a>
       <a href="contact.html">Contact</a>
-      <a href="Tosellornottosell.html">To Sell</a>
+      <a href="shop.html">To Sell</a>
     </div>
   </div>
 
