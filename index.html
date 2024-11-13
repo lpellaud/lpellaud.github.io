@@ -79,20 +79,33 @@
             font-weight: lighter;
         }
 
+        .icon-menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
         /* Menu Icon Styling */
         .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
+            position: relative;
+            top: 20px; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Align exactly to the center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
+}
            
-        }
+        
 
         /* Image size for the spider icon */
         .home-icon {
             width: 80px; /* Adjust the size as needed */
-            height: 80px; /* Adjust the size as needed */
+            height: 80px;
+            display: block;
+            margin: 15px; /* Adjust the size as needed */
         }
 
         /* Dropdown Menu Styling */
@@ -100,7 +113,8 @@
             display: none; /* Initially hidden */
             position: absolute;
             top: 110px;
-            right: 20px;
+            left: 50%; /* Align with the center of the page */
+            transform: translateX(-50%); /* Center it horizontally */
             background-color: #131313;
             border-radius: 5px;
             padding: 10px;
@@ -201,7 +215,7 @@
 <body>
 
     <!-- spider Icon for dropdown Menu -->
-    <div class="menu-icon" onclick="toggleMenu(event)">
+    <div class="icon-menu-container" onclick="toggleMenu(event)">
         <img src="./assets/icons/spidercursor.svg" alt="Menu Icon" class="home-icon">
     </div>
 

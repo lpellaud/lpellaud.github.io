@@ -8,7 +8,6 @@
     body {
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      padding-top: 110px;
       color: rgb(255, 162, 0);
       display: flex;
       flex-direction: column;
@@ -32,7 +31,8 @@
         align-items: center;
         text-align: center;
         flex-grow: 1; /* Allow content to take available space */
-        margin: 0 20px; /* Margin to prevent content from touching the edges */
+        margin: 0 20px; 
+        padding-top: 110px;/* Margin to prevent content from touching the edges */
     }
 
     /* Flex container to center all images */
@@ -58,39 +58,58 @@
     footer {
       width: 100%;
       text-align: center;
-      color: rgb(255, 162, 0);
+      color: #39a844;
       font-size: 0.9rem;
       font-weight: lighter;
       margin-top: auto;
       margin-bottom: 20px; /* Space from bottom */
     }
 
-    /* Menu Icon Styling */
-    .menu-icon {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      cursor: pointer;
+    .icon-menu-container {
+        position: fixed; /* Keep it at the top */
+        top: 15px; /* 15px down from the top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust to center */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it stays on top */
     }
 
-    /* Image size for the spider icon */
-    .home-icon {
-      width: 80px;
-      height: 80px;
-    }
+        .menu-icon {
+            position: relative;
+            top: 20px; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Align exactly to the center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+}
+           
+        
 
-    /* Dropdown Menu Styling */
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 110px;
-      right: 20px;
-      background-color: #131313;
-      border-radius: 5px;
-      padding: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
-    }
+        /* Image size for the spider icon */
+        .home-icon {
+            width: 80px; /* Adjust the size as needed */
+            height: 80px;
+            display: block;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 110px;
+            left: 50%; /* Align with the center of the page */
+            transform: translateX(-50%); /* Center it horizontally */
+            background-color: #131313;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+            text-align: center;
+        }
 
     .dropdown-menu a {
       color: rgb(238, 214, 235);
@@ -102,7 +121,7 @@
     }
 
     .dropdown-menu a:hover {
-      background-color: rgb(255, 162, 0);
+      background-color: #39a844 
     }
 
     /* Responsive Styles */
@@ -169,6 +188,7 @@
 </head>
 <body>
 
+  <div class="content-wrapper"></div>
   <div class="content">
     <!-- Flex container for centering images -->
     <div class="same size">
@@ -213,8 +233,8 @@
     </div>
 
     <!-- Spider Icon for dropdown Menu -->
-    <div class="menu-icon" onclick="toggleMenu(event)">
-      <img src="./assets/icons/SpiderCursorOrange.svg" alt="Menu Icon" class="home-icon">
+    <div class="icon-menu-container" onclick="toggleMenu(event)">
+      <img src="./assets/icons/SpiderCursorGreen.svg" alt="Menu Icon" class="home-icon">
     </div>
 
     <!-- Dropdown Menu -->
@@ -228,6 +248,8 @@
     </div>
   </div>
 </div>
+</div>
+
 
   <!-- Footer with Dynamic Year -->
   <footer>
