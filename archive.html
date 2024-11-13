@@ -66,6 +66,17 @@
       margin-bottom: 20px; /* Space from bottom */
     }
 
+    .fixed-menu-container {
+  position: fixed; /* Keeps the container fixed at the top */
+  top: 0; /* Aligns to the top of the viewport */
+  left: 50%; /* Centers the container horizontally */
+  transform: translateX(-50%); /* Corrects centering */
+  z-index: 1000; /* Ensures it stays on top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
     .icon-menu-container {
         position: fixed; /* Keep it at the top */
         top: 15px; /* 15px down from the top */
@@ -96,7 +107,7 @@
         /* Dropdown Menu Styling */
         .dropdown-menu {
             display: none; /* Initially hidden */
-            position: absolute;
+            position: relative;
             top: 110px;
             left: 50%; /* Align with the center of the page */
             transform: translateX(-50%); /* Center it horizontally */
@@ -228,6 +239,7 @@
       </div>
     </div>
 
+    <div class="fixed-menu-container">
     <!-- Spider Icon for dropdown Menu -->
     <div class="icon-menu-container" onclick="toggleMenu(event)">
       <img src="./assets/icons/SpiderCursorGreen.svg" alt="Menu Icon" class="home-icon">
@@ -242,6 +254,7 @@
       <a href="contact.html">Contact</a>
       <a href="shop.html">To Sell</a>
     </div>
+  </div>
   </div>
 </div>
 </div>
