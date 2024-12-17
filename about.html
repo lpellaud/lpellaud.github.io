@@ -31,6 +31,22 @@
       margin: 0 20px; /* Margin to prevent content from touching the edges */
     }
 
+    .image-container {
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto 20px;
+      text-align: center;
+      position: relative;
+}
+
+.photographer-credit {
+  font-size: 8pt;
+  color: rgb(255, 162, 0);
+  margin-top: 10px; /* Space from the bottom of the paragraph */
+  font-weight: lighter;
+  text-align: center;
+}
+
     /* Paragraph styling */
     p {
       font-size: 18pt;
@@ -201,12 +217,17 @@
 
   <div class="content">
     <!-- About me text -->
-    <p> <br> Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
+    <div class="image-container">
+      <img src="./assets/portrait/Lilly preexport 5 - Copy.jpg" alt="Lilly Pellaud" style="width: 300px;margin-top: 150px;">
+      <p class="photographer-credit">Photo by Kushtrim Memeti</p>
+  </div>
+
+    <p> <br> Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
     Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
     Sprouting from personal observations, her works blend the boundaries of public and private.
     <br><br>Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
     exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
-    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work.</p>
+    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work. <br><br></p>
 
     <!-- Spider Icon for dropdown Menu -->
     <div class="icon-menu-container" onclick="toggleMenu(event)">
