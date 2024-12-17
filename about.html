@@ -32,12 +32,22 @@
     }
 
     .image-container {
-      width: 80%;
-      max-width: 300px;
-      margin: 0 auto 20px;
-      text-align: center;
-      position: relative;
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Ensure vertical stacking */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 300px; /* Restrict maximum size */
+  margin: 0 auto 20px; /* Center container and add spacing */
 }
+
+.responsive-image {
+  width: 100%; /* Make image responsive */
+  max-width: 300px; /* Set a maximum size */
+  margin: 150px auto 0; /* Center the image with some space */
+  display: block; /* Ensure proper centering */
+}
+
 
 .photographer-credit {
   font-size: 8pt;
@@ -45,6 +55,7 @@
   margin-top: 10px; /* Space from the bottom of the paragraph */
   font-weight: lighter;
   text-align: center;
+  display: block;
 }
 
     /* Paragraph styling */
@@ -218,7 +229,7 @@
   <div class="content">
     <!-- About me text -->
     <div class="image-container">
-      <img src="./assets/portrait/Lilly preexport 5 - Copy.jpg" alt="Lilly Pellaud" style="width: 300px;margin-top: 150px;">
+      <img src="./assets/portrait/Lilly preexport 5 - Copy.jpg" alt="Lilly Pellaud" class="responsive-image">
       <p class="photographer-credit">Photo by Kushtrim Memeti</p>
   </div>
 
@@ -227,7 +238,7 @@
     Sprouting from personal observations, her works blend the boundaries of public and private.
     <br><br>Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
     exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
-    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work. <br><br></p>
+    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work. <br><br><br></p>
 
     <!-- Spider Icon for dropdown Menu -->
     <div class="icon-menu-container" onclick="toggleMenu(event)">
