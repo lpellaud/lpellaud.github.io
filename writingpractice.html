@@ -8,19 +8,16 @@
     body {
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      color: rgb(255, 162, 0);
+      color: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
-      background: 
-        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-        white;
+      background-image: url("./assets/backgrounds/cuir.jpg"); /* Replace with your image URL */      
       background-size: 200px 100px;
-      background-position: 0 0, 150px 1px;
+      background-position: 0 0, 150px 0px;
     }
 
       /* Content container */
@@ -32,7 +29,16 @@
         text-align: center;
         flex-grow: 1; /* Allow content to take available space */
         margin: 0 20px; 
-        padding-top: 110px;/* Margin to prevent content from touching the edges */
+    }
+
+    p {
+      font-size: 18pt;
+      font-style: italic;
+      color: rgb(255, 255, 255);
+      max-width: 650px;
+      margin: 20px 0;
+      line-height: 1.5;
+
     }
 
     /* Flex container to center all images */
@@ -59,7 +65,7 @@
     footer {
       width: 100%;
       text-align: center;
-      color: #39a844;
+      color: #ffffff;
       font-size: 0.9rem;
       font-weight: lighter;
       margin-top: auto;
@@ -107,7 +113,7 @@
         /* Dropdown Menu Styling */
         .dropdown-menu {
             display: none; /* Initially hidden */
-            position: relative;
+            position: absolute;
             top: 110px;
             left: 50%; /* Align with the center of the page */
             transform: translateX(-50%); /* Center it horizontally */
@@ -128,7 +134,7 @@
     }
 
     .dropdown-menu a:hover {
-      background-color: #39a844 
+      background-color: #ffffff 
     }
 
     /* Responsive Styles */
@@ -195,76 +201,28 @@
 </head>
 <body>
 
-  <div class="content-wrapper"></div>
-  <div class="content">
-    <!-- Flex container for centering images -->
-    <div class="same size">
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/bacio_collective/" target="_blank">
-          <img src="./assets/archive/bacio.png" alt="Image 1">
-        </a>
-      </div>
-    <div class="same size">
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C_SjBr2K5V9/" target="_blank">
-          <img src="./assets/archive/Screenshot Papillarya.png" alt="Image 1">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C-P20jwsVc6/?img_index=9" target="_blank">
-          <img src="./assets/archive/plestelin.png" alt="Image 2">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/p/C-FDXYvoLse/" target="_blank">
-          <img src="./assets/archive/345_8.jpg" alt="Image 3">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/ode_to_ideas/" target="_blank">
-          <img src="./assets/archive/THEWAITINGROOM.jpg" alt="Image 4">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.zhdk.ch/en/research/ifcar/thomas-isler-how-does-landscape-sound-2023-19919" target="_blank">
-          <img src="./assets/archive/IFCARPOSTER.jpg" alt="Image 5">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.zhdk.ch/veranstaltung/52011" target="_blank">
-          <img src="./assets/archive/wonky and skewed.jpg" alt="Image 6">
-        </a>
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <img src="./assets/archive/Untitled 2-3.jpg" alt="Image 7">
-      </div>
-      <div class="bloc_une_photo_plus_legende">
-        <a href="https://www.instagram.com/zhdkfinearts/reel/Cq59syQosoC/" target="_blank">
-          <img src="./assets/archive/Screenshot (99).png" alt="Image 8">
-        </a>
-      </div>
-    </div>
-
-    <div class="fixed-menu-container">
-    <!-- Spider Icon for dropdown Menu -->
-    <div class="icon-menu-container" onclick="toggleMenu(event)">
-      <img src="./assets/icons/SpiderCursorGreen.svg" alt="Menu Icon" class="home-icon">
-    </div>
-
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu" id="dropdownMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-      <a href="archive.html">Archive</a>
-      <a href="contact.html">Contact</a>
-      <a href="shop.html">To Sell</a>
-    </div>
+  <div class="content" id="content">
+    <p>Sorry!<br>
+    This webpage is momentarily being renewed.
+     <br> In the meantime, I invite you to download my portfolio.
+    </p>
   </div>
-  </div>
-</div>
-</div>
+  
 
+  <div class="icon-menu-container" onclick="toggleMenu(event)">
+    <img src="./assets/icons/SpiderCursorWhite.svg" alt="Menu Icon" class="home-icon">
+  </div>
+
+  <!-- Dropdown Menu -->
+<div class="dropdown-menu" id="dropdownMenu">
+  <a href="index.html"> Home</a>
+  <a href="about.html"> About</a>
+  <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
+  <a href="works.html"> Works</a>
+  <a href="contact.html"> Contact</a>
+  <a href="shop.html"> To sell</a>
+
+</div>
 
   <!-- Footer with Dynamic Year -->
   <footer>

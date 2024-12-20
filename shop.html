@@ -15,6 +15,9 @@
       align-items: center;
       min-height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
+      background-image: url('./assets/backgrounds/velour.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
     } 
 
     /* Content container */
@@ -31,7 +34,7 @@
     /* Paragraph styling */
     p {
       font-size: 18pt;
-      color: #7953f2;
+      color: #000000;
       max-width: 650px;
       margin: 20px 0;
       line-height: 1.5;
@@ -41,7 +44,7 @@
     footer {
       width: 100%;
       text-align: center;
-      color: #7953f2;
+      color: #000000;
       font-size: 0.9rem;
       font-weight: lighter;
       margin-top: auto;
@@ -85,7 +88,7 @@
             top: 110px;
             left: 50%; /* Align with the center of the page */
             transform: translateX(-50%); /* Center it horizontally */
-            background-color: #131313;
+            background-color: #1e1e1e;
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
@@ -101,7 +104,7 @@
     }
 
     .dropdown-menu a:hover {
-      background-color:#7953f2;
+      background-color:#ffffff;
     }
 
     /* Responsive Styles */
@@ -181,7 +184,7 @@
 
     <!-- Spider Icon for dropdown Menu -->
     <div class="icon-menu-container" onclick="toggleMenu(event)">
-      <img src="./assets/icons/SpiderCursorPurple.svg" alt="Menu Icon" class="home-icon">
+      <img src="./assets/icons/spidercursor.svg" alt="Menu Icon" class="home-icon">
     </div>
 
     <!-- Dropdown Menu -->
@@ -189,7 +192,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-      <a href="archive.html">Archive</a>
+      <a href="works.html">Works</a>
       <a href="contact.html">Contact</a>
       <a href="shop.html">To Sell</a>
     </div>

@@ -1,91 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About me</title>
+  <title>Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Center everything using Flexbox */
     body {
       font-family: 'Sans Source Pro', sans-serif;
       font-weight: bold;
-      color: rgb(255, 132, 0);
+      color: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
-      background-image: url('./assets/backgrounds/tissu\ foncé\ -\ Copy.jpg'); /* Background image */
-      background-size: cover; /* Cover the entire background */
-      background-position: center; /* Center the background image */
+      background-image: url("./assets/backgrounds/cuir.jpg"); /* Replace with your image URL */      
+      background-size: 200px 100px;
+      background-position: 0 0, 150px 0px;
     }
 
-    /* Content container */
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-grow: 1; /* Allow content to take available space */
-      margin: 0 20px; /* Margin to prevent content from touching the edges */
+      /* Content container */
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; /* Allow content to take available space */
+        margin: 0 20px; 
     }
 
-    .image-container {
-  display: flex; /* Use Flexbox for centering */
-  flex-direction: column; /* Ensure vertical stacking */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  width: 100%; /* Full width for responsiveness */
-  max-width: 300px; /* Restrict maximum size */
-  margin: 0 auto 20px; /* Center container and add spacing */
-}
-
-.responsive-image {
-  width: 100%; /* Make image responsive */
-  max-width: 300px; /* Set a maximum size */
-  margin: 150px auto 0; /* Center the image with some space */
-  display: block; /* Ensure proper centering */
-}
-
-
-.photographer-credit {
-  font-size: 8pt;
-  color: rgb(255, 132, 0);
-  margin-top: 10px; /* Space from the bottom of the paragraph */
-  font-weight: lighter;
-  text-align: center;
-  display: block;
-}
-
-    /* Paragraph styling */
     p {
       font-size: 18pt;
-      color: rgb(255, 132, 0);
+      color: rgb(255, 255, 255);
       max-width: 650px;
       margin: 20px 0;
       line-height: 1.5;
+
+    }
+
+    /* Flex container to center all images */
+    .same.size {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Center and size each image container */
+    .bloc_une_photo_plus_legende {
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .bloc_une_photo_plus_legende img {
+      width: 100%; /* Adjusted to take full width of the container */
     }
 
     /* Footer Styling */
     footer {
       width: 100%;
       text-align: center;
-      color: rgb(255, 132, 0);
-      font-size: 0.8rem;
+      color: #ffffff;
+      font-size: 0.9rem;
       font-weight: lighter;
       margin-top: auto;
       margin-bottom: 20px; /* Space from bottom */
     }
+
+    .fixed-menu-container {
+  position: fixed; /* Keeps the container fixed at the top */
+  top: 0; /* Aligns to the top of the viewport */
+  left: 50%; /* Centers the container horizontally */
+  transform: translateX(-50%); /* Corrects centering */
+  z-index: 1000; /* Ensures it stays on top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
     .icon-menu-container {
         position: fixed; /* Keep it at the top */
         top: 15px; /* 15px down from the top */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Adjust to center */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
         z-index: 1000; /* Ensure it stays on top */
     }
 
@@ -100,7 +101,6 @@
             cursor: pointer;
 }
            
-        
 
         /* Image size for the spider icon */
         .home-icon {
@@ -129,20 +129,22 @@
       display: block;
       padding: 8px;
       font-size: 18px;
+      align-items: center;      
     }
 
     .dropdown-menu a:hover {
-      background-color: rgb(255, 255, 255);
+      background-color: #ffffff 
     }
 
     /* Responsive Styles */
     @media (max-width: 1024px) {
       body {
         font-size: 16pt;
+        flex-direction: column;
       }
 
       footer {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
 
       .menu-icon {
@@ -158,52 +160,24 @@
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-      
-      p{
-        font-size: 14pt;
-        max-width: 70%;
-      }
-
-      .menu-icon {
-        font-size: 28px;
-        top: 20px;
-        right: 20px;
-      }
-
-      .dropdown-menu a {
-        font-size: 16px;
-        padding: 8px;
-      }
-    }
-
-    @media (min-width: 480px) and (max-width: 767px) {
-      
-      p{
-        font-size: 12pt;
-        max-width: 70%;
-      }
-
-      .menu-icon {
-        font-size: 28px;
-        top: 20px;
-        right: 20px;
-      }
-
-      .dropdown-menu a {
-        font-size: 16px;
-        padding: 8px;
-      }
-    }
-
-    @media (max-width: 479px) {
       body {
         flex-direction: column;
-        padding: 20px;
+      }
+      .menu-icon {
+        font-size: 28px;
+        top: 20px;
+        right: 20px;
       }
 
-      p {
-        font-size: 12pt;
-        max-width: 90%;
+      .dropdown-menu a {
+        font-size: 16px;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        flex-direction: column;
       }
 
       footer {
@@ -226,35 +200,26 @@
 </head>
 <body>
 
-  <div class="content">
-    <!-- About me text -->
-    <div class="image-container">
-      <img src="./assets/portrait/Lilly preexport 5 - Copy.jpg" alt="Lilly Pellaud" class="responsive-image">
-      <p class="photographer-credit">Photo by Kushtrim Memeti</p>
+  <div class="content" id="content">
+  <p> <a href="videoandinstallation.html">Video & Installation</a> </p><br><br>
+  <p> <a href="writingpractice.html">Writing</a> </p>
+</div>
+  
+
+  <div class="icon-menu-container" onclick="toggleMenu(event)">
+    <img src="./assets/icons/SpiderCursorWhite.svg" alt="Menu Icon" class="home-icon">
   </div>
 
-    <p> <br> Lily Pellaud (born 2000) is an emerging artist based in Zurich, Switzerland.
-    Her artistic practice is centered around the conception of site-specific installations and text-based works, often incorporating video elements.
-    Sprouting from personal observations, her works blend the boundaries of public and private.
-    <br><br>Since her graduation in 2023, she has been reflecting on her life as a young artist through her work,
-    exploring themes of labor, creativity, and productivity with a touch of humor or poetry.
-    Her vibrant, surreal aesthetic often takes inspiration from movies and collage-like styles, with frequent incorporation of herself into her work. <br><br><br></p>
+  <!-- Dropdown Menu -->
+<div class="dropdown-menu" id="dropdownMenu">
+  <a href="index.html"> Home</a>
+  <a href="about.html"> About</a>
+  <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
+  <a href="works.html"> Works</a>
+  <a href="contact.html"> Contact</a>
+  <a href="shop.html"> To sell</a>
 
-    <!-- Spider Icon for dropdown Menu -->
-    <div class="icon-menu-container" onclick="toggleMenu(event)">
-      <img src="./assets/icons/spidercursor.svg" alt="Menu Icon" class="home-icon">
-    </div>
-
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu" id="dropdownMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-      <a href="works.html">Works</a>
-      <a href="contact.html">Contact</a>
-      <a href="shop.html">To Sell</a>
-    </div>
-  </div>
+</div>
 
   <!-- Footer with Dynamic Year -->
   <footer>
