@@ -25,7 +25,15 @@
             font-family: 'Sans Source Pro', sans-serif;
             font-weight: bold;
             font-style: normal;
+            animation: gradientShift 20s infinite;
         }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
 
         h1 {
             color: rgb(0, 0, 0);
@@ -118,10 +126,11 @@
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         .dropdown-menu a {
-            color: rgb(238, 214, 235);
+            color: inherit;
             text-decoration: none;
             display: block;
             padding: 8px;
@@ -129,7 +138,7 @@
         }
 
         .dropdown-menu a:hover {
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255, 0.2);
         }
 
         /* Media Queries */
@@ -213,17 +222,15 @@
 </head>
 <body>
 
-    <!-- spider Icon for dropdown Menu -->
-    <div class="icon-menu-container" onclick="toggleMenu(event)">
+    <!-- spider Icon for Index -->
+    <a href="index.html" class="icon-menu-container">
         <img src="./assets/icons/spidercursor.svg" alt="Menu Icon" class="home-icon">
-    </div>
+    </a>
 
     <!-- Dropdown Menu -->
     <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html"> Home</a>
         <a href="about.html"> About</a>
         <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-        <a href="works.html"> Works</a>
         <a href="contact.html"> Contact</a>
         <a href="shop.html"> To Sell</a>
 
@@ -242,20 +249,45 @@
         // JavaScript to dynamically set the current year
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // JavaScript to toggle dropdown menu visibility
-        function toggleMenu(event) {
-            event.stopPropagation(); //Prevent event bubbling
-            const dropdown = document.getElementById('dropdownMenu');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        // Function to calculate contrasting color
+        function getContrastingColor(rgbColor) {
+            const rgb = rgbColor.match(/\d+/g).map(Number); // Parse "rgb(x, y, z)"
+            const luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]; // Luminance formula
+            return luminance > 128 ? 'black' : 'white'; // Return black or white for contrast
         }
 
-        // Optional: Close the dropdown if clicked outside
-        window.onclick = function(event) {
+        // Click Event Listener
+        document.addEventListener('click', function (event) {
             const dropdown = document.getElementById('dropdownMenu');
-            if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') 
-                dropdown.style.display = 'none';        
-            
-            }
+
+            // Prevent showing dropdown if interactive element is clicked
+            const interactiveElements = ['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'SELECT', 'LABEL'];
+            if (interactiveElements.includes(event.target.tagName)) return;
+
+            // Get click position
+            const clickX = event.clientX;
+            const clickY = event.clientY;
+
+            // Detect the background color of the clicked area
+            const clickedElement = document.elementFromPoint(clickX, clickY);
+            const backgroundColor = getComputedStyle(clickedElement).backgroundColor;
+
+            // Set dropdown's text and background color for better contrast
+            dropdown.style.backgroundColor = backgroundColor;
+            dropdown.style.color = getContrastingColor(backgroundColor);
+
+            // Position and show the dropdown
+            dropdown.style.display = 'block';
+            dropdown.style.left = `${clickX}px`;
+            dropdown.style.top = `${clickY}px`;
+        });
+
+        // Prevent closing dropdown when clicking inside it
+        document.getElementById('dropdownMenu').addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+
     </script>
 </body>
 </html>

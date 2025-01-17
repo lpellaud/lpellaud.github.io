@@ -124,8 +124,7 @@
         }
 
     .dropdown-menu a {
-      color: rgb(238, 214, 235);
-      text-decoration: none;
+      color: inherit;
       display: block;
       padding: 8px;
       font-size: 18px;
@@ -206,16 +205,14 @@
 </div>
   
 
-  <div class="icon-menu-container" onclick="toggleMenu(event)">
-    <img src="./assets/icons/SpiderCursorWhite.svg" alt="Menu Icon" class="home-icon">
-  </div>
+<a href="index.html" class="icon-menu-container">
+  <img src="./assets/icons/spidercursor.svg" alt="Menu Icon" class="home-icon">
+</a>
 
   <!-- Dropdown Menu -->
 <div class="dropdown-menu" id="dropdownMenu">
-  <a href="index.html"> Home</a>
   <a href="about.html"> About</a>
   <a href="./docs/PORTFOLIO20241009_Lily Pellaud_.pdf" target="_blank"> &darr; Portfolio &darr;</a>
-  <a href="works.html"> Works</a>
   <a href="contact.html"> Contact</a>
   <a href="shop.html"> To sell</a>
 
@@ -229,21 +226,44 @@
   <script>
     // JavaScript to dynamically set the current year
     document.getElementById("year").textContent = new Date().getFullYear();
+// Function to calculate contrasting color
+function getContrastingColor(rgbColor) {
+            const rgb = rgbColor.match(/\d+/g).map(Number); // Parse "rgb(x, y, z)"
+            const luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]; // Luminance formula
+            return luminance > 128 ? 'black' : 'white'; // Return black or white for contrast
+        }
 
-    // JavaScript to toggle dropdown menu visibility
-    function toggleMenu(event) {
-      event.stopPropagation(); // Prevent event bubbling
-      const dropdown = document.getElementById('dropdownMenu');
-      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    }
+        // Click Event Listener
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('dropdownMenu');
 
-    // Optional: Close the dropdown if clicked outside
-    window.onclick = function(event) {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (!event.target.matches('.menu-icon') && dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      }
-    };
+            // Prevent showing dropdown if interactive element is clicked
+            const interactiveElements = ['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'SELECT', 'LABEL'];
+            if (interactiveElements.includes(event.target.tagName)) return;
+
+            // Get click position
+            const clickX = event.clientX;
+            const clickY = event.clientY;
+
+            // Detect the background color of the clicked area
+            const clickedElement = document.elementFromPoint(clickX, clickY);
+            const backgroundColor = getComputedStyle(clickedElement).backgroundColor;
+
+            // Set dropdown's text and background color for better contrast
+            dropdown.style.backgroundColor = backgroundColor;
+            dropdown.style.color = getContrastingColor(backgroundColor);
+
+            // Position and show the dropdown
+            dropdown.style.display = 'block';
+            dropdown.style.left = `${clickX}px`;
+            dropdown.style.top = `${clickY}px`;
+        });
+
+        // Prevent closing dropdown when clicking inside it
+        document.getElementById('dropdownMenu').addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    
   </script>
 
 </body>
